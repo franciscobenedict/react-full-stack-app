@@ -3,12 +3,15 @@ import { defaultState } from '../../server/defaultState';
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
-import { taskCreationSaga } from './sagas.mock';
+// import { taskCreationSaga } from './sagas.mock';
+import { taskCreationSaga, taskModificationSaga } from './sagas';
 import { createTask, requestTaskCreation} from './mutations';
 
-const sagaMiddleware = createSagaMiddleware();
-import * as sagas from './sagas.mock';
+// import * as sagas from './sagas.mock';
+import * as sagas from './sagas';
 import * as mutations from './mutations';
+
+const sagaMiddleware = createSagaMiddleware();
 
 export const store = createStore(
   combineReducers({
@@ -57,5 +60,5 @@ export const store = createStore(
 );
 
 for (let saga in sagas) {
-  sagaMiddleware.run(taskCreationSaga);
+  sagaMiddleware.run(taskCreationSaga, taskModificationSaga);
 }
