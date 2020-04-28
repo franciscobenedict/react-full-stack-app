@@ -4,7 +4,8 @@ let db = null;
 
 export async function connectDB() {
   if (db) return db;
-  let client = await MongoClient.connect(url,{ useNewUrlParser: true });
+  // let client = await MongoClient.connect(url,{ useNewUrlParser: true });
+  let client = await MongoClient.connect(url,{ useUnifiedTopology: true });
   db = client.db();
   console.log("Got DB,", db);
   return db;
