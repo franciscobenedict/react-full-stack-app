@@ -24,8 +24,8 @@ const routeGuard = Component => ({match})=> {
 export const Main = ()=> (
   <Router history={history}>
     <Provider store={store}>
-      <div>
-        < ConnectedNavigation />
+      <div className="root">
+        <ConnectedNavigation/>
 
         <Route
           exact
@@ -53,7 +53,7 @@ export const Main = ()=> (
           // render={({match})=>(<ConnectTaskDetail match={match} />)}
         />
 
-        <ConnectedFooter />
+        <ConnectedFooter/>
       </div>
     </Provider>
   </Router>

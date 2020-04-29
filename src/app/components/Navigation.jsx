@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Navigation = ()=> (
-  <div>
+  <div className="header">
     <h1>My Application</h1>
 
     <ul>

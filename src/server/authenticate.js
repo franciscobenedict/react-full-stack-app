@@ -15,7 +15,7 @@ async function assembleUserState(user){
   return {
     tasks,
     groups,
-    session:{authenticated: `AUTHENTICATED`, id:user.id}
+    session:{ authenticated: `AUTHENTICATED`, id:user.id }
   }
 }
 

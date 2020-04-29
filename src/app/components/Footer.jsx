@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 
 const Footer = ()=> (
-  <div>
+  <div className="fixed-bottom">
     <footer>Copyright &copy; 2020 | Cisco's App |  ...</footer>
   </div>
 );
