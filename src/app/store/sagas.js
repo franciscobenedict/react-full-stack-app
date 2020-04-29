@@ -5,7 +5,7 @@ import * as mutations from './mutations';
 import { history} from './history';
 
 import { v4 as uuidv4 } from 'uuid';
-const url = "http://localhost:7772";
+const url = process.env.NODE_ENV == `production` ? `` : "http://localhost:7772";
 
 export function* taskCreationSaga(){
   while (true) {
