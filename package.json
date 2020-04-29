@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "history": "^4.7.2",
+    "babel-cli": "^6.26.0",
+    "history": "^4.10.1",
     "md5": "^2.2.1",
     "react": "^16.4.2",
     "react-dom": "^16.5.0",
