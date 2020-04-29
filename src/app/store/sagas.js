@@ -1,10 +1,10 @@
 import { take, put, select } from 'redux-saga/effects';
-
-import axios from 'axios';
-import * as mutations from './mutations';
-import { history} from './history';
-
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+
+import * as mutations from './mutations';
+import { history } from './history';
+
 const url = process.env.NODE_ENV == `production` ? `` : "http://localhost:7772";
 
 export function* taskCreationSaga(){
