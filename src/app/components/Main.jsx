@@ -11,6 +11,8 @@ import { ConnectedDashboard } from './Dashboard';
 import { ConnectTaskDetail } from './TaskDetail';
 // import { Redirect } from 'react-router';
 
+import '../styles.scss';
+
 const routeGuard = Component => ({match})=> {
   console.info("Route guard", match);
   if (!store.getState().session.authenticated) {
