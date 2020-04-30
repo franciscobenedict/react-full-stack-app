@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
 
-import '../app.module';
-import '../global';
-
 export const Home = ()=>(
   <div className="main">
     <h2>Home</h2>
