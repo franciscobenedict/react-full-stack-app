@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navigation = ()=> (
   <div className="header">
-    <h1>My Application</h1>
+    <h1>The Duchess</h1>
 
     <ul>
       <li><Link to="/">Home page</Link></li>
