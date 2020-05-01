@@ -3,7 +3,9 @@ import React from 'react';
 
 const Footer = ()=> (
   <div className="fixed-bottom">
-    <footer>Copyright &copy; 2020 | The Duchess App </footer>
+    <footer>
+      <div className="container">Copyright &copy; 2020 | The Duchess App</div>
+    </footer>
   </div>
 );
 

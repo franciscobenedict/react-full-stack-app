@@ -10,7 +10,7 @@ export const Dashboard = ({groups})=>(
           key={group.id}
           id={group.id}
           name={group.name}
-          className="col"
+          className="col-sm col-12"
         />
       ))
     }

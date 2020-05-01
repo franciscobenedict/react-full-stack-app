@@ -2,11 +2,10 @@
 @import 'components/_main';
 
 body {
-
+  // HEADINGS
+  h1 { font-size: $heading1; }
+  h2 { font-size: $heading2; }
+  h3 { font-size: $heading3; }
+  h4 { font-size: $heading4; }
+  h5 { font-size: $heading5; }
 }
-
-h1 { font-size: $heading1; }
-h2 { font-size: $heading2; }
-h3 { font-size: $heading3; }
-h4 { font-size: $heading4; }
-h5 { font-size: $heading5; }

@@ -47,8 +47,6 @@ export const authenticationRoute = app => {
     });
 
     let state = await assembleUserState(user);
-
     res.send({token, state});
-
   });
 };

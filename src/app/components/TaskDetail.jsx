@@ -14,7 +14,7 @@ const TaskDetail = ({
   setTaskName,
   setTaskGroup
 })=>(
-  <div className="card p-3 col-6">
+  <div className="card p-3 col-12 col-sm-12 col-md-12 col-lg-6">
     <div>
       <input className="form-control form-control-lg" onChange={setTaskName} value={task.name} />
     </div>

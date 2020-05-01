@@ -1,11 +1,7 @@
+.root {
+  padding-bottom: 50px;
+  padding-top: 100px;
 
-// Header styles
-
-// Footer styles
-footer {
-  background: $dark_grey;
-  color: $white;
-  height: 50px;
+  @import './navigation';
+  @import './footer';
 }
-
-// Menu

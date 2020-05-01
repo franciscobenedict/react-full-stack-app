@@ -1,0 +1,78 @@
+// Navigation styles
+.navbar {
+  background-color: $light_grey;
+
+  // LOGIN BUTTON
+  .login_btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    @include respond-below(md) {
+      right: 100px;
+    }
+  }
+
+  // USER ICON
+  .user_icon_dropdown {
+    position: absolute;
+    right: 300px;
+    top: 10px;
+
+    @include respond-below(md) {
+      right: 100px;
+    }
+  }
+
+  // LINKS
+  .navbar-nav {
+    // Menu
+    .nav-link {
+      color: $nav_link_color;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $nav_link_color_hover;
+      }
+
+      &.active {
+        background: $dark_grey;
+        color: $nav_link_color_active;
+        position: relative;
+        @include respond-above(md) {
+          background: transparent;
+          &:after {
+            content: "";
+            position: absolute;
+            white-space: nowrap;
+            top: 38px;
+            left: calc(50% - 10px);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $white;
+          }
+        }
+      }
+
+      @include respond-below(md) {
+        border-radius: 3px;
+        margin: 10px 0;
+        padding: 10px;
+
+        &:hover {
+          background: $nav_link_color_hover;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // SEARCH BAR
+  form {
+    &.search_bar_form {
+      margin-bottom: 0;
+    }
+  }
+}
