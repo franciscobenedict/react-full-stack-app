@@ -11,3 +11,14 @@ $small_font_size: 0.8rem;
 $medium_font_size: 1rem;
 $large_font_size: 1.2rem;
 $x_large_font_size: 1.6rem;
+
+//
+.error_text {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  border-radius: 5px;
+  color: $red;
+  font-size: $large_font_size;
+  padding: 10px;
+  margin: 10px 0;
+}

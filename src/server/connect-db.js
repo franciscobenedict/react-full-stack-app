@@ -7,7 +7,7 @@ export async function connectDB() {
   // let client = await MongoClient.connect(url,{ useNewUrlParser: true });
   let client = await MongoClient.connect(url,{ useUnifiedTopology: true });
   db = client.db();
-  console.info("Got DB,", db);
+  console.info("Got DB:", db);
   return db;
 }
 

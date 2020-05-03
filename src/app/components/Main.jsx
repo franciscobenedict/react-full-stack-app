@@ -8,6 +8,7 @@ import { ConnectedFooter } from './Footer';
 import { ConnectedHome } from './Home';
 import { ConnectedAbout } from './About';
 import { ConnectedLogin } from './Login';
+import { ConnectedLogout } from './Logout';
 import { ConnectedDashboard } from './Dashboard';
 import { ConnectTaskDetail } from './TaskDetail';
 import { ConnectedUserSettings } from './UserSettings';
@@ -66,6 +67,12 @@ export const Main = ()=> (
           path="/usersettings"
           render={routeGuard(ConnectedUserSettings)}
           // render={()=>(<ConnectedUserSettings/>)}
+        />
+
+        <Route
+          exact
+          path="/Logout"
+          component={ConnectedLogout}
         />
 
         <ConnectedFooter/>

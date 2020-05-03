@@ -31,10 +31,14 @@ const TaskDetail = ({
       </select>
     </div>
 
-    <div>
-      <Link to="/dashboard">
+    <div className="row btn_card_task">
+      <Link to="/dashboard" className="done_btn col-6">
         <button className="btn btn-primary mt-2">Done</button>
       </Link>
+
+      <div className="remove_btn col-6">
+        <button className="btn btn-primary mt-2">Remove</button>
+      </div>
     </div>
   </div>
 );

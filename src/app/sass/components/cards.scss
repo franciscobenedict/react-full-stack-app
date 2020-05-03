@@ -1,6 +1,6 @@
 .card_holder {
   border: 1px solid $medium_grey;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20 0px;
   position: relative;
 
@@ -40,5 +40,15 @@
     align-items: center;
     justify-content: right;
     width: auto;
+  }
+}
+
+.card {
+  .btn_card_task {
+    .done_btn, .remove_btn {
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }

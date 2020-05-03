@@ -1,10 +1,70 @@
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import React from 'react';
 import { store } from '../store';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// USER BUTTONS
+function UserButton(props) {
+  const pageURI = window.location.pathname+window.location.search;
+  const liClassName = '';
+  const aClassName = '';//(props.path === pageURI) ? "nav-link active" : "nav-item";
+  //const logout = console.log('....Logout called....');  //localStorage.clear() && window.location.href = '/';
+
+  return (
+    <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
+      <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
+      <NavDropdown.Item as={Link} to="/dashboard">Another action</NavDropdown.Item>
+      <NavDropdown.Item as={Link} to="/dashboard">Something</NavDropdown.Item>
+      <NavDropdown.Divider />
+      <NavDropdown.Item as={Link} to="/usersettings">User settings</NavDropdown.Item>
+      <NavDropdown.Divider />
+      <NavDropdown.Item onClick={Logout}>Sign out</NavDropdown.Item>
+    </NavDropdown>
+  );
+}
+
+// LOGIN BUTTON
+function LoginButton(props) {
+  return (
+    <div className='login_btn'>
+      <a href='/login' className="btn btn-primary">Login</a>
+    </div>
+  )
+}
+
+// USER SEARCH BAR
+function UserSearchBar(props) {
+  return (
+    <Form inline className="search_bar_form">
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-success">Search</Button>
+    </Form>
+  )
+}
+
+// LOGGED IN STATES
+function UserLoggedIn(props) {
+  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
+  if (isLoggedIn) { return <UserButton />; }
+  return <LoginButton />;
+}
+function ShowSearchBar(props) {
+  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
+  if (isLoggedIn) { return <UserSearchBar />; }
+  return null;
+}
+
+// LOGOUT
+function Logout() {
+  console.log(' ===> LOGOUT!!!');
+  localStorage.clear();
+  return window.location.href = '/logout';
+}
+
+// POPULATE NAV LINKS
 const ItemNav = props => {
   const pageURI = window.location.pathname+window.location.search;
   const liClassName = '';
@@ -18,55 +78,11 @@ const ItemNav = props => {
   );
 }
 
-//USER BUTTONS
-function UserButton(props) {
-  const pageURI = window.location.pathname+window.location.search;
-  const liClassName = '';
-  const aClassName = '';//(props.path === pageURI) ? "nav-link active" : "nav-item";
-  return (
-    <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
-      <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
-      <NavDropdown.Item as={Link} to="/dashboard">Another action</NavDropdown.Item>
-      <NavDropdown.Item as={Link} to="/dashboard">Something</NavDropdown.Item>
-      <NavDropdown.Divider />
-      <NavDropdown.Item as={Link} to="/usersettings">User settings</NavDropdown.Item>
-    </NavDropdown>
-  );
-}
-function LoginButton(props) {
-  return (
-    <div className='login_btn'>
-      <a href='/login' className="btn btn-primary">Login</a>
-    </div>
-  )
-}
-function UserSearchBar(props) {
-  return (
-    <Form inline className="search_bar_form">
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">Search</Button>
-    </Form>
-  )
-}
-function UserLoggedIn(props) {
-  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
-  if (isLoggedIn) {
-    return <UserButton />;
-  }
-  return <LoginButton />;
-}
-function ShowSearchBar(props) {
-  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
-  if (isLoggedIn) {
-    return <UserSearchBar />;
-  }
-  return null;
-}
-
+//NAVIGATION
 const Navigation = (props) => {
   return (
     <Navbar expand='lg' className="fixed-top">
-      <Navbar.Brand href="/">The Duchess</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">The Duchess</Navbar.Brand>
       <UserLoggedIn isLoggedIn={false} />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
