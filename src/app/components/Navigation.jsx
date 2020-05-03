@@ -35,7 +35,9 @@ function UserButton(props) {
 }
 function LoginButton(props) {
   return (
-    <div className='login_btn'><a href='/login' className="btn btn-primary">Login</a></div>
+    <div className='login_btn'>
+      <a href='/login' className="btn btn-primary">Login</a>
+    </div>
   )
 }
 function UserSearchBar(props) {

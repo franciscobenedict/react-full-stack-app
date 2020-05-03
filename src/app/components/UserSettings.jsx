@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 
-export const UserSettings = ({groups})=>(
+export const UserSettings = ()=>(
   <div className="row">
     <div className="col-sm col-12">
       <h2> User settings</h2>

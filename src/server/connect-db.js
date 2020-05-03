@@ -7,8 +7,8 @@ export async function connectDB() {
   // let client = await MongoClient.connect(url,{ useNewUrlParser: true });
   let client = await MongoClient.connect(url,{ useUnifiedTopology: true });
   db = client.db();
-  console.log("Got DB,", db);
+  console.info("Got DB,", db);
   return db;
 }
 
-// connectDB();
+// connectDB(); // <=== This is used for testing the connectDB script in the package.json file (doesn't actially do anything.)
