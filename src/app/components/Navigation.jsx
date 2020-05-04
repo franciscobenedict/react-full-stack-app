@@ -59,7 +59,7 @@ const ItemNav = props => {
   const aClassName = '';
   const isActive = (path, match, location) => !!(match || path === location.pathname);
   return (
-    <Nav.Link as={NavLink} to={props.path} activeClassName="active" exact={true}>
+    <Nav.Link as={NavLink} to={props.path} activeClassName="active" exact={true} >
       {props.name}
       {(props.path === pageURI) ? (<span className="sr-only">(current)</span>) : ''}
     </Nav.Link>
@@ -71,7 +71,7 @@ const Navigation = (props) => {
   const loggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
   return (
     <Navbar expand='lg' className="fixed-top">
-      <Navbar.Brand as={Link} to="/">
+      <Navbar.Brand as={Link} to="/" >
         <img src={logo} alt="This is an example logo" />
       </Navbar.Brand>
       { (loggedIn) && <UserButton /> }

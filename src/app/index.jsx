@@ -9,7 +9,11 @@ import './styles.scss';
 import './fonts/FuturaPTBook.otf';
 import { Main } from './components/Main';
 
-library.add(fab, faCheckSquare, faCoffee, faUser);
+/* Add all FontAwesome icons to be used here after `fab`*/
+library.add(
+  fab,
+  faUser
+);
 
 ReactDom.render(
   < Main />,

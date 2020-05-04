@@ -16,6 +16,8 @@ import { ConnectedUserSettings } from './UserSettings';
 import { ConnectedTermsAndConditions} from './termsandconditions';
 import { ConnectedPrivacyPolicy} from './privacypolicy';
 // import { Redirect } from 'react-router';
+// import ScrollUpButton from "react-scroll-up-button";
+import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
 
 const routeGuard = Component => ({match})=> {
   console.info("Route guard", match);
@@ -28,7 +30,7 @@ const routeGuard = Component => ({match})=> {
 }
 
 export const Main = ()=> (
-  <Router history={history}>
+  <Router history={history} >
     <Provider store={store}>
       <div className="root">
         <ConnectedNavigation/>
@@ -97,6 +99,7 @@ export const Main = ()=> (
         />
 
         <ConnectedFooter/>
+        <ScrollUpButton  ContainerClassName="__scroll_to_top"/>
       </div>
     </Provider>
   </Router>
