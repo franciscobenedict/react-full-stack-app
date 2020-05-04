@@ -2,6 +2,11 @@
 .navbar {
   background-color: $light_grey;
 
+  // LOGO
+  .navbar-brand {
+    padding: 0;
+  }
+
   // LOGIN BUTTON
   .login_btn {
     position: absolute;

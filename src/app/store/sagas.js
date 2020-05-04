@@ -28,7 +28,7 @@ export function* taskCreationSaga(){
 
 export function* taskRemovalSaga(){
   while (true) {
-    console.log('SAGA TO REMOVE A TASK');
+    // console.log('SAGA TO REMOVE A TASK');
     const {groupID} = yield take(mutations.REMOVE_TASK);
     const ownerID = `U1`;
     const taskID = uuidv4();

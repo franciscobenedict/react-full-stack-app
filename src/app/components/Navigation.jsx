@@ -5,6 +5,7 @@ import React from 'react';
 import { store } from '../store';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import logo from '../images/dfms-logo-color.png';
 
 // USER BUTTONS
 function UserButton(props) {
@@ -70,7 +71,9 @@ const Navigation = (props) => {
   const loggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
   return (
     <Navbar expand='lg' className="fixed-top">
-      <Navbar.Brand as={Link} to="/">The Duchess</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">
+        <img src={logo} alt="This is an example logo" />
+      </Navbar.Brand>
       { (loggedIn) && <UserButton /> }
       { (!loggedIn) && <LoginButton /> }
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

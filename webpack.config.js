@@ -1,6 +1,5 @@
 const path = require("path");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
   mode: "development",
   entry: path.resolve(__dirname,`src`,`app`),
@@ -63,7 +62,8 @@ module.exports = {
       //   use: [{
       //       loader: 'url-loader?limit=10000&mimetype=application/font-woff'
       //   }],
-      // }, {
+      // },
+      // {
       //   test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //   include: SRC,
       //   use: [{
@@ -71,9 +71,52 @@ module.exports = {
       //   }]
       // },
       {
-        test: /\.(otf|eot|woff|woff2|ttf|svg|png|jpg)$/,
+        test: /\.(otf|eot|woff|woff2|ttf)$/,
         loader: 'file-loader?limit=30000&name=[name]-[hash].[ext]'
-      }
+      },
+
+      // {
+      //   test: /\.(jpg|png|svg)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[path][name].[hash].[ext]',
+      //   }
+      // },
+
+      {
+        test: /\.(jpg|png|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        }
+      },
+
+      // {
+      //   test: /\.(png|svg|jpg|jpeg|gif)$/,
+      //   loader: require.resolve("file-loader") + "?name=../[path][name].[ext]"
+      // },
+      // {
+      //   test: /\.(png|svg|jpg|jpeg|gif|tiff)$/,
+      //   use: [
+      //     'file-loader?name=images/[name].[ext]'
+      //   ]
+      // },
+
+      // {
+      //   test: /\.(jpg|png)$/,
+      //   use: {
+      //     loader: "url-loader",
+      //     options: {
+      //       limit: 25000,
+      //     }
+      //   }
+      // },
+      // {
+      //   loader: "resolve-url-loader",
+      //   options: {
+      //     sourceMap: true
+      //   }
+      // }
     ]
   }
 }
