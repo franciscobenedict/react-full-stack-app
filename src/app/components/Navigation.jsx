@@ -11,7 +11,6 @@ function UserButton(props) {
   const pageURI = window.location.pathname+window.location.search;
   const liClassName = '';
   const aClassName = '';//(props.path === pageURI) ? "nav-link active" : "nav-item";
-  //const logout = console.log('....Logout called....');  //localStorage.clear() && window.location.href = '/';
 
   return (
     <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
@@ -45,18 +44,6 @@ function UserSearchBar(props) {
   )
 }
 
-// LOGGED IN STATES
-function UserLoggedIn(props) {
-  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
-  if (isLoggedIn) { return <UserButton />; }
-  return <LoginButton />;
-}
-function ShowSearchBar(props) {
-  const isLoggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
-  if (isLoggedIn) { return <UserSearchBar />; }
-  return null;
-}
-
 // LOGOUT
 function Logout() {
   console.log(' ===> LOGOUT!!!');
@@ -80,19 +67,21 @@ const ItemNav = props => {
 
 //NAVIGATION
 const Navigation = (props) => {
+  const loggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
   return (
     <Navbar expand='lg' className="fixed-top">
       <Navbar.Brand as={Link} to="/">The Duchess</Navbar.Brand>
-      <UserLoggedIn isLoggedIn={false} />
+      { (loggedIn) && <UserButton /> }
+      { (!loggedIn) && <LoginButton /> }
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='mr-auto'>
-          <ItemNav path="/"             name="Home"          />
-          <ItemNav path="/about"        name="About"         />
-          <ItemNav path="/dashboard"    name="Dashboard"     />
-          <ItemNav path="/usersettings" name="User settings" />
+          <ItemNav path="/" name="Home" />
+          <ItemNav path="/about" name="About" />
+          { (loggedIn) && <ItemNav path="/dashboard" name="Dashboard" />}
+          { (loggedIn) && <ItemNav path="/usersettings" name="User settings" /> }
         </Nav>
-        <ShowSearchBar isLoggedIn={false} />
+        { (loggedIn) && <UserSearchBar /> }
       </Navbar.Collapse>
     </Navbar>
   );
