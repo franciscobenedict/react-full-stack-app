@@ -1,10 +1,6 @@
 import md5 from 'md5';
 
 export const defaultState = {
-  // session: {
-  //   authenticated:false
-  // },
-
   users:[
     {
       id:"U1",
@@ -29,6 +25,10 @@ export const defaultState = {
       name:"Done",
       id:"G3",
       owner:"U1"
+    },{
+      name:"Other",
+      id:"G4",
+      owner:"U2"
     }
   ],
   tasks:[
@@ -48,7 +48,7 @@ export const defaultState = {
       name:"Compile ES6",
       id:"T3",
       group:"G2",
-      owner:"U2",
+      owner:"U1",
       isComplete:false
     },{
       name:"Update component snapshot",
@@ -62,6 +62,12 @@ export const defaultState = {
       group:"G3",
       owner:"U1",
       isComplete:false,
+    },{
+      name:"THIS IS MR C EEYO ONLY",
+      id:"T6",
+      group:"G4",
+      owner:"U2",
+      isComplete:false
     }
   ],
   comments:[
@@ -75,6 +81,11 @@ export const defaultState = {
       id:"C2",
       task:"T2",
       content:"New comment!!!"
+    },{
+      owner:"U2",
+      id:"C3",
+      task:"T6",
+      content:"A comment by Mr C Eeyo!!!"
     }
   ]
 }

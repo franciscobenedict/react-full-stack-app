@@ -76,8 +76,11 @@ const Navigation = (props) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='mr-auto'>
-          <ItemNav path="/" name="Home" />
+          { (!loggedIn) &&  <ItemNav path="/" name="Welcome" /> }
+          { (loggedIn) &&  <ItemNav path="/home" name="Home" /> }
+
           <ItemNav path="/about" name="About" />
+
           { (loggedIn) && <ItemNav path="/dashboard" name="Dashboard" />}
           { (loggedIn) && <ItemNav path="/usersettings" name="User settings" /> }
         </Nav>

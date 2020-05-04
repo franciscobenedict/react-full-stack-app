@@ -6,12 +6,15 @@ import { history } from '../store/history';
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 import { ConnectedHome } from './Home';
+import { ConnectedHomeLoggedInUser } from './HomeLoggedInUser';
 import { ConnectedAbout } from './About';
 import { ConnectedLogin } from './Login';
 import { ConnectedLogout } from './Logout';
 import { ConnectedDashboard } from './Dashboard';
 import { ConnectTaskDetail } from './TaskDetail';
 import { ConnectedUserSettings } from './UserSettings';
+import { ConnectedTermsAndConditions} from './termsandconditions';
+import { ConnectedPrivacyPolicy} from './privacypolicy';
 // import { Redirect } from 'react-router';
 
 const routeGuard = Component => ({match})=> {
@@ -34,6 +37,12 @@ export const Main = ()=> (
           exact
           path="/"
           component={ConnectedHome}
+        />
+
+        <Route
+          exact
+          path="/home"
+          component={ConnectedHomeLoggedInUser}
         />
 
         <Route
@@ -73,6 +82,18 @@ export const Main = ()=> (
           exact
           path="/Logout"
           component={ConnectedLogout}
+        />
+
+        <Route
+          exact
+          path="/termsandconditions"
+          component={ConnectedTermsAndConditions}
+        />
+
+        <Route
+          exact
+          path="/privacypolicy"
+          component={ConnectedPrivacyPolicy}
         />
 
         <ConnectedFooter/>

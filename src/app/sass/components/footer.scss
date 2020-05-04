@@ -3,5 +3,43 @@ footer {
   background: $dark_grey;
   color: $white;
   font-size: $small_font_size;
-  height: 50px;
+  height: 100px;
+  .footer_content_holder {
+    display: table;
+    height: 100px;
+    width: 100%;
+    .footer_content {
+      display: table-cell;
+      position: relative;
+      vertical-align: middle;
+      .copyright {
+        left: 0;
+        position: absolute;
+      }
+      .footer_links {
+        position: absolute;
+        right: 0;
+        ul {
+          display: flex;
+          align-items: stretch; /* Default */
+          justify-content: space-between;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          li {
+            display: block;
+            flex: 0 1 auto; /* Default */
+            list-style-type: none;
+            margin-left: 10px;
+            &:first-child {
+              margin-left: 0;
+            }
+            a {
+              color: $light_grey;
+            }
+          }
+        }
+      }
+    }
+  }
 }

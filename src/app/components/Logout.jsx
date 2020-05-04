@@ -1,7 +1,6 @@
 import React from 'react';
 import * as mutations from '../store/mutations';
 import { connect } from 'react-redux';
-
 import { Link } from 'react-router-dom';
 
 const LogoutComponent = ()=>(
