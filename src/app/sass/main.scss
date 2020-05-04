@@ -2,6 +2,11 @@
 @import 'components/_main';
 
 body {
+  font-size: $medium_font_size;
+  line-height: 1.428571429;
+  color: $dark_grey;
+  font-family: 'futura-pt-book';
+
   // HEADINGS
   h1 { font-size: $heading1; }
   h2 { font-size: $heading2; }

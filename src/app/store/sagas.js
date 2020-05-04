@@ -26,6 +26,25 @@ export function* taskCreationSaga(){
   }
 }
 
+export function* taskRemovalSaga(){
+  while (true) {
+    console.log('SAGA TO REMOVE A TASK');
+    const {groupID} = yield take(mutations.REMOVE_TASK);
+    const ownerID = `U1`;
+    const taskID = uuidv4();
+
+    console.log('ownerID',  ownerID);
+    console.log('taskID',  taskID);
+    yield put(mutations.removeTask(taskID));
+
+    const { res } = yield axios.post(url + `/task/remove`, {
+      task: {
+        id: taskID
+      }
+    });
+  }
+}
+
 export function* taskModificationSaga() {
   while (true) {
     const task = yield take([

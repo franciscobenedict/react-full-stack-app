@@ -9,6 +9,7 @@ export const AUTHENTICATING = `AUTHENTICATING`;
 export const AUTHENTICATED = `AUTHENTICATED`;
 export const NOT_AUTHENTICATED = `NOT_AUTHENTICATED`;
 export const SET_STATE = `SET_STATE`;
+export const REMOVE_TASK = `REMOVE_TASK`;
 
 export const requestTaskCreation = (groupID)=>({
   type:REQUEST_TASK_CREATION,
@@ -55,4 +56,9 @@ export const processingAuthenticateUser = (status = AUTHENTICATING, session = nu
 export const setState = (state = {})=>({
   type:SET_STATE,
   state
+});
+
+export const removeTask = (taskID)=>({
+  type:REMOVE_TASK,
+  taskID,
 });

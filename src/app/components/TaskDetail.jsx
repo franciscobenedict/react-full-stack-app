@@ -12,7 +12,9 @@ const TaskDetail = ({
 
   setTaskCompletion,
   setTaskName,
-  setTaskGroup
+  setTaskGroup,
+
+  removeTask
 })=>(
   <div className="card p-3 col-12 col-sm-12 col-md-12 col-lg-6">
     <div>
@@ -37,7 +39,7 @@ const TaskDetail = ({
       </Link>
 
       <div className="remove_btn col-6">
-        <button className="btn btn-primary mt-2">Remove</button>
+        <button className="btn btn-primary mt-2" onClick={ ()=>removeTask(id) }>Remove</button>
       </div>
     </div>
   </div>
@@ -67,6 +69,9 @@ const mapDispatchToProps = (dispatch,ownProps)=>{
     },
     setTaskName(e){
       dispatch(mutations.setTaskName(id, e.target.value));
+    },
+    removeTask(id){
+      dispatch(mutations.removeTask(id));
     }
   }
 }

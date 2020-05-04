@@ -56,6 +56,23 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ],
+      },
+      // {
+      //   test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   include: SRC,
+      //   use: [{
+      //       loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      //   }],
+      // }, {
+      //   test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   include: SRC,
+      //   use: [{
+      //       loader: 'file-loader'
+      //   }]
+      // },
+      {
+        test: /\.(otf|eot|woff|woff2|ttf|svg|png|jpg)$/,
+        loader: 'file-loader?limit=30000&name=[name]-[hash].[ext]'
       }
     ]
   }
