@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as mutations from '../store/mutations';
 
+import { ConnectedNavigation } from './Navigation';
+import { ConnectedFooter } from './Footer';
+
 const TaskDetail = ({
   id,
   comments,
@@ -16,32 +19,36 @@ const TaskDetail = ({
 
   removeTask
 })=>(
-  <div className="card p-3 col-12 col-sm-12 col-md-12 col-lg-6">
-    <div>
-      <input className="form-control form-control-lg" onChange={setTaskName} value={task.name} />
-    </div>
+  <div>
+    <ConnectedNavigation/>
+      <div className="card p-3 col-12 col-sm-12 col-md-12 col-lg-6">
+        <div>
+          <input className="form-control form-control-lg" onChange={setTaskName} value={task.name} />
+        </div>
 
-    <div>
-      <button className="btn btn-primary mt-2" onClick={()=> setTaskCompletion(id,!isComplete)}>{isComplete ? `Reopen` : `Complete`}</button>
-    </div>
+        <div>
+          <button className="btn btn-primary mt-2" onClick={()=> setTaskCompletion(id,!isComplete)}>{isComplete ? `Reopen` : `Complete`}</button>
+        </div>
 
-    <div className="mt-3">
-      <select className="form-control" onChange={setTaskGroup} value={task.group}>
-        {groups.map(group=>(
-          <option key={group.id} value={group.id}>{group.name}</option>
-        ))}
-      </select>
-    </div>
+        <div className="mt-3">
+          <select className="form-control" onChange={setTaskGroup} value={task.group}>
+            {groups.map(group=>(
+              <option key={group.id} value={group.id}>{group.name}</option>
+            ))}
+          </select>
+        </div>
 
-    <div className="row btn_card_task">
-      <Link to="/dashboard" className="done_btn col-6">
-        <button className="btn btn-primary mt-2">Done</button>
-      </Link>
+        <div className="row btn_card_task">
+          <Link to="/dashboard" className="done_btn col-6">
+            <button className="btn btn-primary mt-2">Done</button>
+          </Link>
 
-      <div className="remove_btn col-6">
-        <button className="btn btn-primary mt-2" onClick={ ()=>removeTask(id) }>Remove</button>
+          <div className="remove_btn col-6">
+            <button className="btn btn-primary mt-2" onClick={ ()=>removeTask(id) }>Remove</button>
+          </div>
+        </div>
       </div>
-    </div>
+    <ConnectedFooter/>
   </div>
 );
 

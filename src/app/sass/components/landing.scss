@@ -1,0 +1,12 @@
+.root {
+  .main {
+    &.fullscreen {
+      background: $pale-purple;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

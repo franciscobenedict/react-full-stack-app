@@ -3,9 +3,12 @@ import { Link, NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import React from 'react';
 import { store } from '../store';
+// import * as mutations from '../store/mutations';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../images/dfms-logo-color.png';
+
+// console.log('store', store);
 
 // USER BUTTONS
 function UserButton(props) {
@@ -15,6 +18,7 @@ function UserButton(props) {
 
   return (
     <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
+      /* <div>username here</div> */
       <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/dashboard">Another action</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/dashboard">Something</NavDropdown.Item>
@@ -49,7 +53,7 @@ function UserSearchBar(props) {
 function Logout() {
   console.log(' ===> LOGOUT!!!');
   localStorage.clear();
-  return window.location.href = '/logout';
+  return window.location.href = '/';
 }
 
 // POPULATE NAV LINKS
@@ -79,7 +83,7 @@ const Navigation = (props) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='mr-auto'>
-          { (!loggedIn) &&  <ItemNav path="/" name="Welcome" /> }
+          { (!loggedIn) &&  <ItemNav path="/mainhome" name="Welcome" /> }
           { (loggedIn) &&  <ItemNav path="/home" name="Home" /> }
 
           <ItemNav path="/about" name="About" />
