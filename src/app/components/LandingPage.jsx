@@ -5,10 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 import * as mutations from '../store/mutations';
 import { connect } from 'react-redux';
 import bird from '../images/bird.png';
-
 import ModalDialog from 'react-bootstrap/ModalDialog';
 import Button from 'react-bootstrap/Button';
-
 
 function ModalLogin ({authenticateUser, authenticated}) {
   const [show, setShow] = useState(false);
@@ -43,23 +41,28 @@ function ModalLogin ({authenticateUser, authenticated}) {
 }
 
 export const LandingPage = ({authenticateUser, authenticated})=> {
-const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   return (
-
     <div className="main fullscreen">
       <h1>Landing Page</h1>
       <p className="">Welcome to the Duchess App</p>
       <div>
-        <Link to="/mainhome">Enter site</Link>
+        {(localStorage.getItem('authenticatedUser') !== "AUTHENTICATED") &&<Link to="/mainhome">Enter site</Link>}
+        {(localStorage.getItem('authenticatedUser') === "AUTHENTICATED") &&<Link to="/home">Enter site</Link>}
       </div>
       <div>
         <Link to="/about">What The Duchess is about</Link>
       </div>
+      <div>
+        <Link to="/dashboard">Dashboard</Link>
+      </div>
       <img src={bird} alt="this is an image" />
 
       <div>
-        {(authenticated) &&
-          <div>You are logged in!</div>}
+        <div>1 ==> localStorage.getItem('authenticatedUser'): {localStorage.getItem('authenticatedUser')}</div>
+        <div>2 ==> authenticated: {authenticated}{!authenticated}</div>
+
+        {(authenticated) && <div>You are currently logged in as "{localStorage.getItem('username')}"</div>}
         { (!authenticated) &&
           <div>
             You are not logged in.
@@ -96,8 +99,15 @@ const [show, setShow] = useState(false);
   )
 };
 
-const mapStateToProps = ({session})=>({
-  authenticated:session.authenticated
+// const mapStateToProps = ({session})=>({
+//   authenticated:session.authenticated
+//
+//   // authenticated: localStorage.getItem('authenticatedUser')
+// });
+
+const mapStateToProps = ()=>({
+  authenticated:localStorage.getItem('authenticatedUser')
+  // authenticated: localStorage.getItem('authenticatedUser')
 });
 
 const mapDispatchToProps = (dispatch)=>({
@@ -108,6 +118,4 @@ const mapDispatchToProps = (dispatch)=>({
     dispatch(mutations.requestAuthenticateUser(username, password));
   }
 })
-
-
 export const ConnectedLandingPage = connect(mapStateToProps, mapDispatchToProps)(LandingPage);

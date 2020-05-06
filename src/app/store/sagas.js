@@ -74,6 +74,14 @@ export function* userAuthenticationSaga(){
       // console.log("username:", username);
       yield put(mutations.setState(data.state));
       yield put(mutations.processingAuthenticateUser(mutations.AUTHENTICATED));
+
+      // - Save the JWT in localStorage
+      localStorage.setItem('localToken', data.token);
+      localStorage.setItem('username', username);
+      localStorage.setItem('authenticatedUser', data.state.session.authenticated);
+      localStorage.setItem('localState', data.state);
+      //console.log('||||||| ====> data.state', data.state.groups);
+
       // history.push('/dashboard');
       history.push('/home');
     } catch (e) {

@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
 import bird from '../images/bird.png';
-
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
@@ -22,5 +21,4 @@ export const Home = ()=>(
 );
 
 const mapStateToProps = state=>state;
-
 export const ConnectedHome = connect(mapStateToProps)(Home);

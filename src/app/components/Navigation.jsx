@@ -18,7 +18,7 @@ function UserButton(props) {
 
   return (
     <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
-      /* <div>username here</div> */
+      <div className="username">Hello, {localStorage.getItem('username')}</div>
       <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/dashboard">Another action</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/dashboard">Something</NavDropdown.Item>
@@ -51,7 +51,6 @@ function UserSearchBar(props) {
 
 // LOGOUT
 function Logout() {
-  console.log(' ===> LOGOUT!!!');
   localStorage.clear();
   return window.location.href = '/';
 }
@@ -72,7 +71,7 @@ const ItemNav = props => {
 
 //NAVIGATION
 const Navigation = (props) => {
-  const loggedIn = store.getState().session.authenticated === 'AUTHENTICATED';
+  const loggedIn = localStorage.getItem('authenticatedUser') === "AUTHENTICATED"; // store.getState().session.authenticated === 'AUTHENTICATED';
   return (
     <Navbar expand='lg' className="fixed-top">
       <Navbar.Brand as={Link} to="/" >

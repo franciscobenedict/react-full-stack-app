@@ -24,6 +24,16 @@
     right: 300px;
     top: 10px;
 
+    .username {
+      font-weight: $bold;
+      padding: .25rem 1.5rem;
+      position: relative;
+      top: -8px;
+      background: #cccccc;
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem;
+    }
+
     .dropdown-toggle {
       border-radius: 50%;
       border: 1px solid;

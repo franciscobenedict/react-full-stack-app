@@ -15,97 +15,105 @@ import { ConnectTaskDetail } from './TaskDetail';
 import { ConnectedUserSettings } from './UserSettings';
 import { ConnectedTermsAndConditions } from './termsandconditions';
 import { ConnectedPrivacyPolicy } from './privacypolicy';
-
 import { ConnectedLandingPage } from './LandingPage';
 import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
 
+// const localStorageToken = localStorage.getItem('localToken');
+// console.log('localStorage.getItem(\'authenticatedUser\')', localStorage.getItem('authenticatedUser'));
+// console.log('localStorage.getItem(\'localToken\')', localStorage.getItem('localToken'));
 const routeGuard = Component => ({match})=> {
-  console.info("Route guard", match);
-  if (!store.getState().session.authenticated) {
+  // console.info("Route guard", match);
+  if (localStorage.getItem('authenticatedUser') !== "AUTHENTICATED") {
+  // if (!localStorage.getItem('localToken')) {
     // Reroute
     /*return < Redirect to="/Login" />;*/
     return < Redirect to="/" />;
   } else {
-    // console.log('===>>>>>>>> store.getState().tasks', store.getState().tasks);
-    return < Component match={match} />;
+    //
+    // localStorageToken;
+    // localStorage.getItem('username');
+
+    return (
+      < Component match={match} />
+    )
   }
 }
 
 export const Main = ()=> (
-  <Router history={history} >
-    <Provider store={store}>
+  <Router history={ history } >
+    <Provider store={ store }>
       <div className="root">
 
         <Route
           exact
           path="/"
-          component={ConnectedLandingPage}
+          component={ ConnectedLandingPage }
         />
 
         <Route
           exact
           path="/mainhome"
-          component={ConnectedHome}
+          component={ ConnectedHome }
         />
 
         <Route
           exact
           path="/home"
-          render={routeGuard(ConnectedHomeLoggedInUser)}
+          render={ routeGuard(ConnectedHomeLoggedInUser) }
         />
 
         <Route
           exact
           path="/about"
-          component={ConnectedAbout}
+          component={ ConnectedAbout }
         />
 
         <Route
           exact
           path="/Login"
-          component={ConnectedLogin}
+          component={ ConnectedLogin }
         />
 
         <Route
           exact
           path="/dashboard"
-          render={routeGuard(ConnectedDashboard)}
+          render={ routeGuard(ConnectedDashboard) }
           // render={()=>(<ConnectedDashboard/>)}
         />
 
         <Route
           exact
           path="/task/:id"
-          render={routeGuard(ConnectTaskDetail)}
+          render={ routeGuard(ConnectTaskDetail) }
           // render={({match})=>(<ConnectTaskDetail match={match} />)}
         />
 
         <Route
           exact
           path="/usersettings"
-          render={routeGuard(ConnectedUserSettings)}
+          render={ routeGuard(ConnectedUserSettings) }
           // render={()=>(<ConnectedUserSettings/>)}
         />
 
         <Route
           exact
           path="/Logout"
-          component={ConnectedLogout}
+          component={ ConnectedLogout }
         />
 
         <Route
           exact
           path="/termsandconditions"
-          component={ConnectedTermsAndConditions}
+          component={ ConnectedTermsAndConditions }
         />
 
         <Route
           exact
           path="/privacypolicy"
-          component={ConnectedPrivacyPolicy}
+          component={ ConnectedPrivacyPolicy }
         />
 
-        <ScrollUpButton  ContainerClassName="__scroll_to_top"/>
+        <ScrollUpButton ContainerClassName="__scroll_to_top"/>
       </div>
     </Provider>
   </Router>

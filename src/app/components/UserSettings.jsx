@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from 'react-redux';
-
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
@@ -18,5 +17,4 @@ export const UserSettings = ()=>(
 );
 
 const mapStateToProps = state=>state;
-
 export const ConnectedUserSettings = connect(mapStateToProps)(UserSettings);

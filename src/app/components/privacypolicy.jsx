@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from 'react-redux';
-
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
@@ -40,5 +39,4 @@ export const PrivacyPolicy = ()=>(
 );
 
 const mapStateToProps = state=>state;
-
 export const ConnectedPrivacyPolicy = connect(mapStateToProps)(PrivacyPolicy);
