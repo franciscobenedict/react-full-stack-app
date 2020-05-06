@@ -67,9 +67,11 @@ export function* userAuthenticationSaga(){
     const {username, password} = yield take(mutations.REQUEST_AUTHENTICATE_USER);
     try {
       const { data } = yield axios.post(url + `/authenticate`, {username,password});
+
       if(!data) {
         throw new Error();
       }
+
       console.log("Authenticated!", data);
       // console.log("username:", username);
       yield put(mutations.setState(data.state));
@@ -79,8 +81,9 @@ export function* userAuthenticationSaga(){
       localStorage.setItem('localToken', data.token);
       localStorage.setItem('username', username);
       localStorage.setItem('authenticatedUser', data.state.session.authenticated);
-      localStorage.setItem('localState', data.state);
-      //console.log('||||||| ====> data.state', data.state.groups);
+      const newState = JSON.stringify(data.state);
+      // console.log('====> ', newState);
+      localStorage.setItem('localState', newState);
 
       // history.push('/dashboard');
       history.push('/home');

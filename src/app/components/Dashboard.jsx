@@ -4,28 +4,53 @@ import { ConnectedTaskList } from './TaskList';
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
+const storedState = localStorage.getItem('localState');
+const myState = JSON.parse(storedState);
+console.log('myState', myState);
+
+
 export const Dashboard = ({groups})=> {
-  
-  // console.log('groups', {groups});
-  // localStorage.setItem('groups', {groups});
-  // const localState = localStorage.getItem('groups');
-  // console.log('localState', JSON.stringify(localState));
+
+
 
   return (
     <div>
       <ConnectedNavigation/>
-      <div className="row">
-        {
-          groups.map(group=>(
-            <ConnectedTaskList
-              key={group.id}
-              id={group.id}
-              name={group.name}
-              className="col-sm col-12"
-            />
-          ))
-        }
+
+
+      <div>
+      {
+        myState.groups.map(group=>(
+          <ConnectedTaskList
+            key={group.id}
+            id={group.id}
+            name={group.name}
+            className="col-sm col-12"
+          />
+        ))
+      }
       </div>
+
+      <hr />
+
+      <div><div>myState:-</div>
+      {
+        JSON.stringify(myState)
+      }
+      </div>
+
+      <hr />
+
+      {
+        groups.map(group=>(
+          <ConnectedTaskList
+            key={group.id}
+            id={group.id}
+            name={group.name}
+            className="col-sm col-12"
+          />
+        ))
+      }
       <ConnectedFooter/>
     </div>
   )
