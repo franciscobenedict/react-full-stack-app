@@ -1,0 +1,55 @@
+// GRIDS:
+
+// Landing page;
+//____________________
+.landing_grid_item1 { grid-area: a; }
+.landing_grid_item2 { grid-area: b; }
+.landing_grid_item3 { grid-area: c; }
+.landing_grid_item4 { grid-area: d; }
+.landing_grid_item5 { grid-area: e; }
+.landing_grid_item6 { grid-area: f; }
+
+.grid_container_landing {
+  background-color: $grid_background_color;
+  grid-gap: 10px;
+  display: grid;
+
+  grid-template-areas:
+    'a'
+    'b'
+    'c'
+    'd'
+    'e'
+    'f';
+  height: 100vh;
+  padding: 0;
+  width: 100vw;
+
+  &> div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  @include respond-above(sm)  {
+    grid-template-areas:
+      'a a'
+      'b c'
+      'd e'
+      'f f';
+  }
+
+  @include respond-above(md) {
+    grid-template-areas:
+      'a b c'
+      'a b c'
+      'a b c'
+      'a b c'
+      'a d e'
+      'a d e'
+      'a d e'
+      'a d e'
+      'f f f';
+  }
+}

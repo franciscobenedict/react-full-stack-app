@@ -7,6 +7,13 @@
       position: absolute;
       top: 0;
       width: 100%;
+
+      .duchess_logo_container {
+        img {
+          height: 50%;
+          width: 100%;
+        }
+      }
     }
   }
 }
