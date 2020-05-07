@@ -71,12 +71,13 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
             </div>
           }
         </div>
-        <div className="landing_grid_item2">2</div>
-        <div className="landing_grid_item3">3</div>
-        <div className="landing_grid_item4">4</div>
-        <div className="landing_grid_item5">5</div>
+        <div className="landing_grid_item2">1</div>
+        <div className="landing_grid_item3">2</div>
+        <div className="landing_grid_item4">3</div>
+        <div className="landing_grid_item5">4</div>
         <div className="landing_grid_item6">
           <div className="social_icons">
+            social icons
           </div>
         </div>
       </div>
