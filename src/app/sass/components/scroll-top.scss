@@ -1,0 +1,10 @@
+// SCROLL TO TOP
+.__scroll_to_top {
+  bottom: 130px !important;
+  right: 0 !important;
+  z-index: 50 !important;
+
+  @include respond-below(md) {
+    bottom: 50px !important;
+  }
+}

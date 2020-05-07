@@ -61,8 +61,8 @@ const mapStateToProps = (state, ownProps)=>{
     // Change `let groups = myState.groups;` back to `let groups = state.groups;`
 
   let id = ownProps.match.params.id;
-  let task = myState.tasks.find(task=>task.id === id);
-  let groups = myState.groups;
+  let task = state.tasks.find(task=>task.id === id);
+  let groups = state.groups;
 
   return {
     id,

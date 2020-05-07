@@ -8,39 +8,11 @@ const storedState = localStorage.getItem('localState');
 const myState = JSON.parse(storedState);
 console.log('myState', myState);
 
-
 export const Dashboard = ({groups})=> {
-
-
-
   return (
     <div>
       <ConnectedNavigation/>
-
-
-      <div>
-      {
-        myState.groups.map(group=>(
-          <ConnectedTaskList
-            key={group.id}
-            id={group.id}
-            name={group.name}
-            className="col-sm col-12"
-          />
-        ))
-      }
-      </div>
-
-      <hr />
-
-      <div><div>myState:-</div>
-      {
-        JSON.stringify(myState)
-      }
-      </div>
-
-      <hr />
-
+      <div className="main container-fluid">
       {
         groups.map(group=>(
           <ConnectedTaskList
@@ -51,6 +23,7 @@ export const Dashboard = ({groups})=> {
           />
         ))
       }
+      </div>
       <ConnectedFooter/>
     </div>
   )

@@ -3,4 +3,8 @@
   padding-top: 100px;
   @import './navigation';
   @import './footer';
+
+  @include respond-below(md) {
+    padding-bottom: 0;
+  }
 }

@@ -4,6 +4,13 @@ footer {
   color: $white;
   font-size: $small_font_size;
   height: 100px;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 49;
+
   .footer_content_holder {
     display: table;
     height: 100px;
@@ -12,16 +19,15 @@ footer {
       display: table-cell;
       position: relative;
       vertical-align: middle;
-      .copyright {
-        left: 0;
-        position: absolute;
+      .copyright {  }
+      .social-icons {
+        text-align: center;
       }
       .footer_links {
         position: absolute;
-        right: 0;
+        right: 20px;
         ul {
           display: flex;
-          align-items: stretch; /* Default */
           justify-content: space-between;
           width: 100%;
           margin: 0;
@@ -37,6 +43,31 @@ footer {
             a {
               color: $light_grey;
             }
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    height: 250px;
+    position: relative;
+
+    .footer_content_holder {
+      height: 250px;
+      .footer_content {
+        .copyright {
+          text-align: center;
+        }
+        .social-icons {
+          text-align: center;
+        }
+        .footer_links {
+          right:auto;
+          position: relative;
+          ul {
+            justify-content: center;
+            text-align: center;
           }
         }
       }

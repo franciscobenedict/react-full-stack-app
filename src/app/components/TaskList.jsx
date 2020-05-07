@@ -46,7 +46,7 @@ const mapStateToProps = (state, ownProps)=>{
   return {
     name:ownProps.name,
     id:groupID,
-    tasks:myState.tasks.filter(task=>task.group === groupID)
+    tasks:state.tasks.filter(task=>task.group === groupID)
   }
 };
 const mapDispatchToProps = (dispatch, ownProps)=> {

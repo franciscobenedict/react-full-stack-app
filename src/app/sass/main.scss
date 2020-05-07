@@ -13,11 +13,4 @@ body {
   h3 { font-size: $heading3; }
   h4 { font-size: $heading4; }
   h5 { font-size: $heading5; }
-
-  // SCROLL TO TOP
-  .__scroll_to_top {
-    bottom: 130px !important;
-    right: 0 !important;
-    z-index: 50 !important;
-  }
 }
