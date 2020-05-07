@@ -19,7 +19,7 @@ footer {
       display: table-cell;
       position: relative;
       vertical-align: middle;
-      .copyright {  }
+      .copyright {}
       .social-icons {
         margin: 20px 0;
         text-align: center;
@@ -29,9 +29,9 @@ footer {
           border-radius: 10px;
           color: $dark_grey;
           display:inline-block;
-          height: 75px;
+          height: 45px;
           margin: 10px;
-          width: 75px;
+          width: 45px;
           &:hover {
             background: $very_dark_grey;
             border: 10px solid $very_dark_grey;
@@ -42,6 +42,7 @@ footer {
       .footer_links {
         position: absolute;
         right: 20px;
+        top: 40px;
         ul {
           display: flex;
           justify-content: space-between;
@@ -58,6 +59,11 @@ footer {
             }
             a {
               color: $light_grey;
+              line-height: 0;
+              &:hover {
+                color: $ultra_light_grey;
+                text-decoration: none;
+              }
             }
           }
         }
@@ -72,8 +78,9 @@ footer {
     .footer_content_holder {
       height: 250px;
       .footer_content {
-        .copyright {
+        .copyright_container, .footer_links_container {
           text-align: center;
+          width: 100%;
         }
         .social-icons {
           text-align: center;
@@ -81,6 +88,7 @@ footer {
         .footer_links {
           right:auto;
           position: relative;
+          top: 0;
           ul {
             justify-content: center;
             text-align: center;

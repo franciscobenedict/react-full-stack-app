@@ -1,0 +1,24 @@
+// Aligned content middle
+.align_middle_container {
+  display: table;
+  &._100 {
+    height: 100px;
+  }
+  .align_content_middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  @include respond-below(md) {
+    &._0 {
+      height: 0 !important;
+    }
+  }
+
+}
+
+
+.align_text_horizontal_center {
+  text-align: center;
+  width: 100%;
+}
