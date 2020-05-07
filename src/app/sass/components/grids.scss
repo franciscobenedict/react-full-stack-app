@@ -10,7 +10,7 @@
 .landing_grid_item6 { grid-area: f; }
 
 .grid_container_landing {
-  background-color: $grid_background_color;
+  // background-color: $grid_background_color;
   grid-gap: 0px;
   display: grid;
 
@@ -79,19 +79,19 @@
 
   @include respond-above(md) {
     grid-template-areas:
-      'b c a'
-      'b c a'
-      'b c a'
-      'b c a'
-      'd e a'
-      'd e a'
-      'd e a'
-      'd e a'
+      'a b c'
+      'a b c'
+      'a b c'
+      'a b c'
+      'a d e'
+      'a d e'
+      'a d e'
+      'a d e'
       'f f f';
     height: 100vh;
     .landing_grid_item1 {
       border-bottom: 0;
-      border-left: 2px solid rgba(255, 255, 255, 0.8);
+      border-right: 2px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item2 {
       border-right: 1px solid rgba(255, 255, 255, 0.8);

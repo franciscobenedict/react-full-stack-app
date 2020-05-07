@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import * as mutations from '../store/mutations';
 import { connect } from 'react-redux';
-import bird from '../images/bird.png';
+
+// import bird from '../images/bird.png';
+// import bannerLogo from '../images/banner.png';
+import tidyCannibal from '../images/tidyCannibal_logo.png';
+import fbLogo from '../images/fb-logo-grey.svg';
+
 import ModalDialog from 'react-bootstrap/ModalDialog';
 import Button from 'react-bootstrap/Button';
 
@@ -46,30 +51,34 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
     <div className="main fullscreen">
       <div className="grid_container_landing">
         <div className="landing_grid_item1">
-          <div className="duchess_logo_container">
-            <img className="" src="" alt="The Duchess Logo" />
-          </div>
-
-          {
-            (authenticated) &&
-            <div>
-              <div>Hello, "{localStorage.getItem('username')}"</div>
-              <div>You are free to browse The Duchess</div>
-              <div>
-                <div className="button_container">
-                  <Link className="btn btn-primary btn_anchor" to="/home">Browse</Link>
-                </div>
+          <div className="main_landing_container">
+            <div className="main_holder">
+              <div className="duchess_logo_container">
+                <img className="" src={fbLogo} alt="The Duchess Logo" />
               </div>
-            </div>
-          }
 
-          { (!authenticated) &&
-            <div>
-              <Button variant="primary" onClick={() => setShow(true)}>
-                Login
-              </Button>
+              {
+                (authenticated) &&
+                <div className="user_welcome">
+                  <div>Hello, "{localStorage.getItem('username')}"</div>
+                  <div>You are free to browse The Duchess</div>
+                  <div>
+                    <div className="button_container">
+                      <Link className="btn btn-primary btn_anchor" to="/home">Browse</Link>
+                    </div>
+                  </div>
+                </div>
+              }
+
+              { (!authenticated) &&
+                <div className="user_login_btn">
+                  <Button variant="primary" onClick={() => setShow(true)}>
+                    Login
+                  </Button>
+                </div>
+              }
             </div>
-          }
+          </div>
         </div>
         <div className="landing_grid_item2">2</div>
         <div className="landing_grid_item3">3</div>
