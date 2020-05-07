@@ -7,7 +7,7 @@ import { ConnectedFooter } from './Footer';
 
 export const TaskList = ({tasks, name, id, isComplete, createNewTask})=>(
   <div className="row">
-    <div className="p-2 col-12 col-sm-12 col-md-12 col-lg-12">
+    <div className="col-12 col-sm-12 col-md-12 col-lg-12">
       <div className="card_holder">
         <h3 className="card_heading">{name}</h3>
 

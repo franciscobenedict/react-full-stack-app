@@ -13,6 +13,7 @@ export const Dashboard = ({groups})=> {
     <div>
       <ConnectedNavigation/>
       <div className="main container-fluid">
+      <h2>Dashboard</h2>
       {
         groups.map(group=>(
           <ConnectedTaskList
