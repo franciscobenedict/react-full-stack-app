@@ -16,7 +16,7 @@ import { ConnectedUserSettings } from './UserSettings';
 import { ConnectedTermsAndConditions } from './termsandconditions';
 import { ConnectedPrivacyPolicy } from './privacypolicy';
 import { ConnectedLandingPage } from './LandingPage';
-import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 
 // const localStorageToken = localStorage.getItem('localToken');
 // console.log('localStorage.getItem(\'authenticatedUser\')', localStorage.getItem('authenticatedUser'));

@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = ()=> (
-  <footer class="">
+  <footer>
     <div className="container-fluid">
       <div className="footer_content_holder">
         <div className="footer_content">
@@ -16,7 +17,12 @@ const Footer = ()=> (
 
             {/* SOCIALS */}
             <div className="col-12 col-md-12 col-lg-4">
-              <div className="social-icons">social media icons</div>
+              <div className="social-icons">
+                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'youtube']} size="4x" /></Link>
+                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'facebook']} size="4x" /></Link>
+                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="4x" /></Link>
+                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="4x" /></Link>
+              </div>
             </div>
 
             {/* FOOTER LINKS */}

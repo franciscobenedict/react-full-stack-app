@@ -3,12 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import React from 'react';
 import { store } from '../store';
-// import * as mutations from '../store/mutations';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../images/dfms-logo-color.png';
-
-// console.log('store', store);
 
 // USER BUTTONS
 function UserButton(props) {
