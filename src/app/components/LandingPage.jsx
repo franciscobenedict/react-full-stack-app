@@ -83,6 +83,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
 
         {/*  */}
         <div className="landing_grid_item2">
+          <div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
@@ -92,6 +93,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           </div>
         </div>
         <div className="landing_grid_item3">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
@@ -101,6 +103,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           </div>
         </div>
         <div className="landing_grid_item4">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
@@ -110,6 +113,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           </div>
         </div>
         <div className="landing_grid_item5">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">

@@ -10,11 +10,11 @@ import {
   faTwitter,
   faInstagram
 } from '@fortawesome/free-brands-svg-icons';
-import { faUser, faCheckSquare as fasCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCheckSquare as fasCheckSquare, faChevronDown as fasChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faCheckSquare as farCheckSquare } from '@fortawesome/free-regular-svg-icons'
 import './styles.scss';
 import './fonts/FuturaPTBook.otf';
-import { Main }     from './components/Main';
+import { Main } from './components/Main';
 // import { Landing }  from './components/Landing';
 
 /* Add all FontAwesome icons to be used here after `fab`*/
@@ -26,7 +26,7 @@ library.add(
   faTwitter,
   faInstagram,
 
-  fasCheckSquare, farCheckSquare
+  fasCheckSquare, farCheckSquare, fasChevronDown
 );
 
 ReactDom.render(
