@@ -85,7 +85,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item2">
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
-              <Link to="/mainhome" className="grid_link">
+              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
                 <span className="link_content">1 (click me)</span>
               </Link>
             </div>
@@ -94,7 +94,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item3">
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
-              <Link to="/mainhome" className="grid_link">
+              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
                 <span className="link_content">2 (click me)</span>
               </Link>
             </div>
@@ -103,7 +103,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item4">
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
-              <Link to="/mainhome" className="grid_link">
+              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
                 <span className="link_content">3 (click me)</span>
               </Link>
             </div>
@@ -112,7 +112,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item5">
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
-              <Link to="/mainhome" className="grid_link">
+              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
                 <span className="link_content">4 (click me)</span>
               </Link>
             </div>
