@@ -4,9 +4,9 @@ import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
 export const UserSettings = ()=>(
-  <div>
+  <div className="main">
     <ConnectedNavigation/>
-    <div className="main container-fluid">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-sm col-12">
           <h2> User settings</h2>

@@ -2,9 +2,14 @@
   background: $pale-purple;
   height: 100vh;
   padding-bottom: 100px;
-  padding-top: 54px;
+  // padding-top: 54px;
   @import './navigation';
   @import './footer';
+
+  .main {
+    background: $pale-purple;
+    padding-top: 74px;
+  }
 
   // HEADINGS
   h1 { font-size: $heading1; }
@@ -21,7 +26,7 @@
     h4 { font-size: $heading4_s; }
     h5 { font-size: $heading5_s; }
 
-    padding-top: 100px;
+    // padding-top: 100px;
     padding-bottom: 0;
   }
 }

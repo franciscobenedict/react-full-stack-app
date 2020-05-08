@@ -3,8 +3,11 @@
 //_______________________________
 .align_middle_container {
   display: table;
-  &._100 {
+  &._100_px {
     height: 100px;
+  }
+  &._100_percent {
+    height: 100%;
   }
   .align_content_middle {
     display: table-cell;

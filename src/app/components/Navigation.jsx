@@ -41,7 +41,7 @@ function UserSearchBar(props) {
   return (
     <Form inline className="search_bar_form">
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">Search</Button>
+      <button className="btn generic search_btn">Search</button>
     </Form>
   )
 }
@@ -75,7 +75,7 @@ const Navigation = (props) => {
         <img src={logo} alt="This is an example logo" />
       </Navbar.Brand>
       { (loggedIn) && <UserButton /> }
-      { (!loggedIn) && <LoginButton /> }
+      {/* (!loggedIn) && <LoginButton /> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='mr-auto'>

@@ -14,7 +14,7 @@ const Footer = ()=> (
 
             {/* COPYRIGHT  */}
             <div className="col-12 col-md-12 col-lg-4">
-              <div className="align_middle_container _100 _0 copyright_container">
+              <div className="align_middle_container _100_px _0 copyright_container">
                 <div className="align_content_middle">Copyright &copy; { currentYear } | The Duchess App</div>
               </div>
             </div>
@@ -31,7 +31,7 @@ const Footer = ()=> (
 
             {/* FOOTER LINKS */}
             <div className="col-12 col-md-12 col-lg-4">
-              <div className="align_middle_container _100 _0 footer_links_container">
+              <div className="align_middle_container _100_px _0 footer_links_container">
                 <div className="align_content_middle">
                   <div className="footer_links">
                     <ul>

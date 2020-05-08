@@ -12,7 +12,7 @@ export const Dashboard = ({groups})=> {
   return (
     <div className="main">
       <ConnectedNavigation/>
-      <div className="main container-fluid">
+      <div className="container-fluid">
       <h2>Dashboard</h2>
       {
         groups.map(group=>(

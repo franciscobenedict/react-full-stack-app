@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function ModalLogin ({authenticateUser, authenticated}) {
   const [show, setShow] = useState(false);
   return (
-    <div className="main">
+    <div className="">
       <Button variant="primary" onClick={() => setShow(true)}>
         Custom Width Modal
       </Button>
@@ -37,7 +37,7 @@ function ModalLogin ({authenticateUser, authenticated}) {
             <input className="form-control" type="text" placeholder="username" name="username" autoComplete="off" />
             <input className="form-control mt-2" type="password" placeholder="password" defaultValue="" name="password" autoComplete="off" />
             { authenticated === mutations.NOT_AUTHENTICATED ? <p className="error_text">Login incorrect</p> : null }
-            <Button className="form-control mt-2 btn btn-primary" type="submit">Login</Button>
+            <Button className="form-control generic" type="submit">Login</Button>
           </form>
         </Modal.Body>
       </Modal>
@@ -55,7 +55,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
 
         {/* Main grid*/}
         <div className="landing_grid_item1 main_landing_container">
-          <div className="main_holder">
+          <div className="main_holder _grid_content_holder">
             <div className="duchess_logo_container">
               <img className="" src={fbLogo} alt="The Duchess Logo" />
             </div>
@@ -68,34 +68,71 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
                 <div>Hello, <span className="text_italic">{localStorage.getItem('username')}</span></div>
                 {/*<div>Feel free to browse The Duchess app.</div>*/}
                 <div className="button_container">
-                  <Link className="btn user_login_btn" to="/home">Browse</Link>
+                  <Link className="btn generic" to="/home">Browse</Link>
                 </div>
               </div>
             }
 
             { (!authenticated) &&
               <div className="button_container">
-                <button className="btn user_login_btn" variant="" onClick={() => setShow(true)}>Login</button>
+                <button className="btn generic" variant="" onClick={() => setShow(true)}>Login</button>
               </div>
             }
           </div>
         </div>
 
         {/*  */}
-        <div className="landing_grid_item2">2</div>
-        <div className="landing_grid_item3">3</div>
-        <div className="landing_grid_item4">4</div>
-        <div className="landing_grid_item5">5</div>
+        <div className="landing_grid_item2">
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to="/mainhome" className="grid_link">
+                <span className="link_content">1 (click me)</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="landing_grid_item3">
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to="/mainhome" className="grid_link">
+                <span className="link_content">2 (click me)</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="landing_grid_item4">
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to="/mainhome" className="grid_link">
+                <span className="link_content">3 (click me)</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="landing_grid_item5">
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to="/mainhome" className="grid_link">
+                <span className="link_content">4 (click me)</span>
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* Footer grid */}
         <div className="landing_grid_item6 footer_landing_container">
-          <div className="social_icons">
-            <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></Link>
-            <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></Link>
-            <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></Link>
-            <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></Link>
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <div className="social_icons">
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></Link>
+              </div>
+              <div className="copyright">Copyright &copy; { currentYear } | The Duchess App</div>
+
+            </div>
           </div>
-          <div className="copyright">Copyright &copy; { currentYear } | The Duchess App</div>
         </div>
       </div>
 
@@ -117,7 +154,7 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
             { authenticated === mutations.NOT_AUTHENTICATED ? <p className="error_text">Login incorrect</p> : null }
 
               <div className="button_container">
-                <button className="btn user_login_btn" type="submit">Login</button>
+                <button className="btn generic" type="submit">Login</button>
               </div>
 
           </form>

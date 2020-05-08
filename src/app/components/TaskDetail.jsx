@@ -16,9 +16,9 @@ const TaskDetail = ({
   setTaskGroup,
   removeTask
 })=>(
-  <div>
+  <div className="main">
     <ConnectedNavigation/>
-    <div className="main container-fluid">
+    <div className="container-fluid">
       <h2>Dashboard</h2>
       <div className="row">
         <div className="cardcol-12 col-sm-12 col-md-12 col-lg-6">

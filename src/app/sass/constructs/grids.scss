@@ -36,11 +36,18 @@
   .landing_grid_item5 { background: $grid_item5_background_color; }
 
   // GRID HEIGHT
-  .landing_grid_item1 { min-height: 280px; }
+  .landing_grid_item1 {
+    min-height: 280px;
+    ._grid_content_holder { height: 100vh; }
+  }
+
   .landing_grid_item2,
   .landing_grid_item3,
   .landing_grid_item4,
-  .landing_grid_item5 { min-height: 150px; }
+  .landing_grid_item5 {
+    min-height: 150px;
+    ._grid_content_holder { height: 50vh; }
+  }
 
   @include respond-above(sm)  {
     grid-template-areas:
@@ -49,6 +56,15 @@
       'd e'
       'f f';
     height: 100vh;
+
+    .landing_grid_item1,
+    .landing_grid_item2,
+    .landing_grid_item3,
+    .landing_grid_item4,
+    .landing_grid_item5,
+    .landing_grid_item6 {
+      ._grid_content_holder { height: 100%; }
+    }
 
     .landing_grid_item1 {
       border-left: 0;

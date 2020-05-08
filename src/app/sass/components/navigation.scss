@@ -8,21 +8,22 @@
   }
 
   // LOGIN BUTTON
-  .login_btn {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-
-    @include respond-below(md) {
-      right: 100px;
-    }
-  }
+  // .login_btn {
+  //   position: absolute;
+  //   right: 15px;
+  //   top: 10px;
+  //
+  //   @include respond-below(md) {
+  //     right: 100px;
+  //   }
+  // }
 
   // USER ICON
   .user_icon_dropdown {
     position: absolute;
     right: 300px;
     top: 10px;
+    transition: all .2s;
 
     .username {
       font-weight: $bold;
@@ -63,6 +64,7 @@
       color: $nav_link_color;
       font-size: 1rem;
       text-transform: uppercase;
+      transition: all .2s;
 
       &:hover {
         color: $nav_link_color_hover;
@@ -93,6 +95,7 @@
         border-radius: 3px;
         margin: 10px 0;
         padding: 10px;
+        transition: all .2s;
 
         &:hover {
           background: $nav_link_color_hover;

@@ -1,10 +1,9 @@
 .main {
   &.fullscreen {
     left: 0;
-    // height: 100%;
+    padding: 0;
     position: absolute;
     top: 0;
-    // width: 100%;
 
     .main_landing_container {
       display: table;
@@ -26,19 +25,35 @@
           width: auto;
         }
       }
-      //
-      // .user_welcome, .user_login_btn {
-      //   margin-top: 40px;
-      // }
+    }
+
+    .grid_link {
+      display: table;
+      height: 50vh;
+      line-height: 50vh;
+      text-align: center;
+      transition: all .2s;
+      width: 100%;
+      &:hover {
+        background: rgba(0,0,0,0.4);
+        text-decoration: none;
+      }
+      .link_content {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
 
     .footer_landing_container {
       background: #444444;
       color: #FFFFFF;
       font-size: 0.8rem;
+      .copyright {
+        margin: 20px 0;
+      }
     }
 
-    @include respond-below(md) {
+    @include respond-above(sm) {
       .main_landing_container {
         .duchess_logo_container {
           height: 100px;
@@ -49,6 +64,11 @@
         .user_welcome, .user_login_btn {
           margin-top: 20px;
         }
+      }
+
+      .grid_link {
+        height: 100%;
+        line-height: 100%;
       }
 
       .footer_landing_container {
