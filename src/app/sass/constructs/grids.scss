@@ -1,5 +1,6 @@
-// GRIDS:
+// GRIDS
 
+//____________________
 // Landing page;
 //____________________
 .landing_grid_item1 { grid-area: a; }
@@ -10,10 +11,8 @@
 .landing_grid_item6 { grid-area: f; }
 
 .grid_container_landing {
-  // background-color: $grid_background_color;
   grid-gap: 0px;
   display: grid;
-
   grid-template-areas:
     'a'
     'b'
@@ -25,22 +24,23 @@
   width: 100vw;
 
   &> div {
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
   }
 
-  .landing_grid_item1,
+  // GRID COLORS
+  .landing_grid_item1 { background: $grid_item1_background_color; }
+  .landing_grid_item2 { background: $grid_item2_background_color; }
+  .landing_grid_item3 { background: $grid_item3_background_color; }
+  .landing_grid_item4 { background: $grid_item4_background_color; }
+  .landing_grid_item5 { background: $grid_item5_background_color; }
+
+  // GRID HEIGHT
+  .landing_grid_item1 { min-height: 280px; }
   .landing_grid_item2,
   .landing_grid_item3,
   .landing_grid_item4,
-  .landing_grid_item5 {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
-    min-height: 150px;
-  }
-
-  .landing_grid_item1 {
-    min-height: 280px;
-  }
+  .landing_grid_item5 { min-height: 150px; }
 
   @include respond-above(sm)  {
     grid-template-areas:
@@ -52,7 +52,7 @@
 
     .landing_grid_item1 {
       border-left: 0;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+      // border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item2 {
       border-right: 1px solid rgba(255, 255, 255, 0.8);
@@ -73,7 +73,7 @@
       border-bottom: 0;
     }
     .landing_grid_item6 {
-      border-top: 2px solid rgba(255, 255, 255, 0.8);
+      // border-top: 2px solid rgba(255, 255, 255, 0.8);
     }
   }
 
@@ -91,7 +91,7 @@
     height: 100vh;
     .landing_grid_item1 {
       border-bottom: 0;
-      border-right: 2px solid rgba(255, 255, 255, 0.8);
+      // border-right: 2px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item2 {
       border-right: 1px solid rgba(255, 255, 255, 0.8);
@@ -110,7 +110,7 @@
       border-left: 1px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item6 {
-      border-top: 2px solid rgba(255, 255, 255, 0.8);
+      // border-top: 2px solid rgba(255, 255, 255, 0.8);
     }
   }
 }

@@ -1,34 +1,60 @@
-.root {
-  .main {
-    &.fullscreen {
-      background: $pale-purple;
-      left: 0;
+.main {
+  &.fullscreen {
+    left: 0;
+    // height: 100%;
+    position: absolute;
+    top: 0;
+    // width: 100%;
+
+    .main_landing_container {
+      display: table;
       height: 100%;
-      position: absolute;
-      top: 0;
       width: 100%;
 
-      .main_landing_container {
-        display: table;
-        height: 100%;
-        width: 100%;
-        .main_holder {
-          display: table-cell;
-          vertical-align: middle;
-        }
-        .duchess_logo_container {
+      .main_holder {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .duchess_logo_container {
+        height: 200px;
+        margin: 0 auto;
+        max-width: 80%;
+
+        img {
           height: 200px;
-          margin: 0 auto;
-          max-width: 80%;
-          img {
-            height: 200px;
-            width: auto;
-          }
+          width: auto;
+        }
+      }
+      //
+      // .user_welcome, .user_login_btn {
+      //   margin-top: 40px;
+      // }
+    }
+
+    .footer_landing_container {
+      background: #444444;
+      color: #FFFFFF;
+      font-size: 0.8rem;
+    }
+
+    @include respond-below(md) {
+      .main_landing_container {
+        .duchess_logo_container {
+          height: 100px;
+          margin-top: 20px;
+          img { height: 100px; }
         }
 
         .user_welcome, .user_login_btn {
-          margin-top: 40px;
+          margin-top: 20px;
         }
+      }
+
+      .footer_landing_container {
+        background: #444444;
+        color: #FFFFFF;
+        font-size: 0.8rem;
       }
     }
   }

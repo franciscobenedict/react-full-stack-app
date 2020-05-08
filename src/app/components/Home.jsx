@@ -5,7 +5,7 @@ import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
 export const Home = ()=>(
-  <div>
+  <div className="main">
     <ConnectedNavigation/>
       <div className="main container-fluid">
         <h1>Welcome</h1>

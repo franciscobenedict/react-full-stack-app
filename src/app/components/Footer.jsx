@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const currentYear = new Date().getFullYear();
+
 const Footer = ()=> (
   <footer>
     <div className="container-fluid">
@@ -13,17 +15,17 @@ const Footer = ()=> (
             {/* COPYRIGHT  */}
             <div className="col-12 col-md-12 col-lg-4">
               <div className="align_middle_container _100 _0 copyright_container">
-                <div className="align_content_middle">Copyright &copy; 2020 | The Duchess App</div>
+                <div className="align_content_middle">Copyright &copy; { currentYear } | The Duchess App</div>
               </div>
             </div>
 
             {/* SOCIALS */}
             <div className="col-12 col-md-12 col-lg-4">
-              <div className="social-icons">
-                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></Link>
-                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></Link>
-                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></Link>
-                <Link className="social-icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></Link>
+              <div className="social_icons">
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></Link>
+                <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></Link>
               </div>
             </div>
 

@@ -1,16 +1,10 @@
 @import 'variables/_main';
 @import 'components/_main';
+@import 'constructs/_main';
 
 body {
   font-size: $normal_font_size;
   line-height: 1.428571429;
   color: $dark_grey;
   font-family: 'futura-pt-book';
-
-  // HEADINGS
-  h1 { font-size: $heading1; }
-  h2 { font-size: $heading2; }
-  h3 { font-size: $heading3; }
-  h4 { font-size: $heading4; }
-  h5 { font-size: $heading5; }
 }

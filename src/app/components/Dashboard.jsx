@@ -10,7 +10,7 @@ console.log('myState', myState);
 
 export const Dashboard = ({groups})=> {
   return (
-    <div>
+    <div className="main">
       <ConnectedNavigation/>
       <div className="main container-fluid">
       <h2>Dashboard</h2>

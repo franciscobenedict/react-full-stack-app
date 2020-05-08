@@ -1,0 +1,33 @@
+.button_container {
+  margin: 20px 0;
+  .btn {
+    &.user_login_btn, &.browse_btn {
+      background-color: transparent;
+      border: 4px solid $site_button_color;
+      border-radius: 0;
+      color: $site_button_color;
+      transition: all .2s;
+      width: 280px;
+
+      &:hover {
+        background-color: $site_button_color;
+        color: $white;
+      }
+
+      &.btn_white_border {
+        background: $site_button_color;
+        border: 1px solid $white;
+        color: $site_button_color;
+
+        &:hover {
+          background-color: $white;
+          color: $site_button_color;
+        }
+      }
+      &.clear {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { ConnectedNavigation } from './Navigation';
 import { ConnectedFooter } from './Footer';
 
 export const HomeLoggedInUser = ()=>(
-  <div>
+  <div className="main">
     <ConnectedNavigation/>
     <div className="main container-fluid">
       <h1>Home</h1>

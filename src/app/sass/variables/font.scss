@@ -1,9 +1,16 @@
-// HEADINGS
+// HEADINGS NORMAL
 $heading1: 3.5rem;
 $heading2: 3rem;
 $heading3: 2.5rem;
 $heading4: 2rem;
 $heading5: 1.5rem;
+
+// HEADINGS SMALL
+$heading1_s: 2.5rem;
+$heading2_s: 2rem;
+$heading3_s: 1.5rem;
+$heading4_s: 1rem;
+$heading5_s: 0.5rem;
 
 // PARAGRAPH
 $x_small_font_size: 0.6rem;
@@ -16,14 +23,3 @@ $x_large_font_size: 1.8rem;
 // FONT WEIGHTS
 $normal: 400;
 $bold: 600;
-
-// HELPER TEXT
-.error_text {
-  background: rgba(255, 0, 0, 0.1);
-  border: 1px solid red;
-  border-radius: 5px;
-  color: $red;
-  font-size: $large_font_size;
-  padding: 10px;
-  margin: 10px 0;
-}
