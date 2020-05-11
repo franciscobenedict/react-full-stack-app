@@ -9,6 +9,8 @@
 .landing_grid_item4 { grid-area: d; }
 .landing_grid_item5 { grid-area: e; }
 .landing_grid_item6 { grid-area: f; }
+.landing_grid_item7 { grid-area: g; }
+.landing_grid_item8 { grid-area: h; }
 
 .grid_container_landing {
   grid-gap: 0px;
@@ -19,7 +21,9 @@
     'c'
     'd'
     'e'
-    'f';
+    'f'
+    'g'
+    'h';
   padding: 0;
   width: 100vw;
 
@@ -34,6 +38,8 @@
   .landing_grid_item3 { ._grid_content_holder { background: $grid_item3_background_color; } }
   .landing_grid_item4 { ._grid_content_holder { background: $grid_item4_background_color; } }
   .landing_grid_item5 { ._grid_content_holder { background: $grid_item5_background_color; } }
+  .landing_grid_item6 { ._grid_content_holder { background: $grid_item6_background_color; } }
+  .landing_grid_item7 { ._grid_content_holder { background: $grid_item7_background_color; } }
 
   // GRID HEIGHT
   .landing_grid_item1 {
@@ -44,8 +50,10 @@
   .landing_grid_item2,
   .landing_grid_item3,
   .landing_grid_item4,
-  .landing_grid_item5 {
-    min-height: 150px;
+  .landing_grid_item5,
+  .landing_grid_item6,
+  .landing_grid_item7 {
+    min-height: 149px;
 
     ._grid_content_holder {
       height: 50vh;
@@ -82,10 +90,10 @@
 
   @include respond-above(sm)  {
     grid-template-areas:
-      'a a'
+      'a h'
       'b c'
       'd e'
-      'f f';
+      'f g';
     height: 100vh;
 
     .landing_grid_item1,
@@ -93,7 +101,9 @@
     .landing_grid_item3,
     .landing_grid_item4,
     .landing_grid_item5,
-    .landing_grid_item6 {
+    .landing_grid_item6,
+    .landing_grid_item7,
+    .landing_grid_item8 {
       ._grid_content_holder { height: 100%; }
 
       .more_grid { display: none; }
@@ -101,7 +111,6 @@
 
     .landing_grid_item1 {
       border-left: 0;
-      // border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item2 {
       border-right: 1px solid rgba(255, 255, 255, 0.8);
@@ -114,52 +123,28 @@
     .landing_grid_item4 {
       border-right: 1px solid rgba(255, 255, 255, 0.8);
       border-top: 1px solid rgba(255, 255, 255, 0.8);
-      border-bottom: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item5 {
       border-top: 1px solid rgba(255, 255, 255, 0.8);
       border-left: 1px solid rgba(255, 255, 255, 0.8);
-      border-bottom: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     }
     .landing_grid_item6 {
-      // border-top: 2px solid rgba(255, 255, 255, 0.8);
+      border-right: 1px solid rgba(255, 255, 255, 0.8);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .landing_grid_item7 {
+      border-left: 1px solid rgba(255, 255, 255, 0.8);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
     }
   }
 
   @include respond-above(md) {
     grid-template-areas:
       'a b c'
-      'a b c'
-      'a b c'
-      'a b c'
       'a d e'
-      'a d e'
-      'a d e'
-      'a d e'
-      'f f f';
+      'h f g';
     height: 100vh;
-    .landing_grid_item1 {
-      border-bottom: 0;
-      // border-right: 2px solid rgba(255, 255, 255, 0.8);
-    }
-    .landing_grid_item2 {
-      border-right: 1px solid rgba(255, 255, 255, 0.8);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .landing_grid_item3 {
-      border-left: 1px solid rgba(255, 255, 255, 0.8);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .landing_grid_item4 {
-      border-right: 1px solid rgba(255, 255, 255, 0.8);
-      border-top: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .landing_grid_item5 {
-      border-top: 1px solid rgba(255, 255, 255, 0.8);
-      border-left: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .landing_grid_item6 {
-      // border-top: 2px solid rgba(255, 255, 255, 0.8);
-    }
   }
 }

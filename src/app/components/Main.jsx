@@ -16,6 +16,12 @@ import { ConnectedUserSettings } from './UserSettings';
 import { ConnectedTermsAndConditions } from './termsandconditions';
 import { ConnectedPrivacyPolicy } from './privacypolicy';
 import { ConnectedLandingPage } from './LandingPage';
+import { ConnectedFlights } from './Flights';
+import { ConnectedAccommodation } from './Accommodation';
+import { ConnectedEvents } from './Events';
+import { ConnectedActivities } from './Activities';
+import { ConnectedRestaurants } from './Restaurants';
+import { ConnectedTransport } from './Transport';
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 
 // const localStorageToken = localStorage.getItem('localToken');
@@ -70,9 +76,45 @@ export const Main = ()=> (
 
         <Route
           exact
-          path="/Login"
-          component={ ConnectedLogin }
+          path="/Flights"
+          component={ ConnectedFlights }
         />
+
+        <Route
+          exact
+          path="/Accommodation"
+          component={ ConnectedAccommodation }
+        />
+
+        <Route
+          exact
+          path="/Events"
+          component={ ConnectedEvents }
+        />
+
+        <Route
+          exact
+          path="/Activities"
+          component={ ConnectedActivities }
+        />
+
+        <Route
+          exact
+          path="/Restaurants"
+          component={ ConnectedRestaurants }
+        />
+
+        <Route
+          exact
+          path="/Transport"
+          component={ ConnectedTransport }
+        />
+
+        {/*// <Route
+        //   exact
+        //   path="/Login"
+        //   component={ ConnectedLogin }
+        // />*/}
 
         <Route
           exact
@@ -95,11 +137,11 @@ export const Main = ()=> (
           // render={()=>(<ConnectedUserSettings/>)}
         />
 
-        <Route
-          exact
-          path="/Logout"
-          component={ ConnectedLogout }
-        />
+        {/*// <Route
+        //   exact
+        //   path="/Logout"
+        //   component={ ConnectedLogout }
+        // />*/}
 
         <Route
           exact

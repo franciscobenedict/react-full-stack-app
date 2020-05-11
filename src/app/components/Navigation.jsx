@@ -17,9 +17,6 @@ function UserButton(props) {
     <NavDropdown className="user_icon_dropdown" title={<FontAwesomeIcon icon="user" />} id="user-dropdown">
       <div className="username">Hello, {localStorage.getItem('username')}</div>
       <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
-      <NavDropdown.Item as={Link} to="/dashboard">Another action</NavDropdown.Item>
-      <NavDropdown.Item as={Link} to="/dashboard">Something</NavDropdown.Item>
-      <NavDropdown.Divider />
       <NavDropdown.Item as={Link} to="/usersettings">User settings</NavDropdown.Item>
       <NavDropdown.Divider />
       <NavDropdown.Item onClick={Logout}>Sign out</NavDropdown.Item>
@@ -84,10 +81,19 @@ const Navigation = (props) => {
 
           <ItemNav path="/about" name="About" />
 
-          { (loggedIn) && <ItemNav path="/dashboard" name="Dashboard" />}
+          { (loggedIn) && <ItemNav path="/Flights" name="Flights" /> }
+          { (loggedIn) && <ItemNav path="/Accommodation" name="Accommodation" /> }
+          { (loggedIn) && <ItemNav path="/Events" name="Events" /> }
+          { (loggedIn) && <ItemNav path="/Activities" name="Activities" /> }
+          { (loggedIn) && <ItemNav path="/Restaurants" name="Restaurants" /> }
+          { (loggedIn) && <ItemNav path="/Transport" name="Transport" /> }
+
+          {/*
+          { (loggedIn) && <ItemNav path="/dashboard" name="Dashboard" /> }
           { (loggedIn) && <ItemNav path="/usersettings" name="User settings" /> }
+          */}
         </Nav>
-        { (loggedIn) && <UserSearchBar /> }
+        {/* (loggedIn) && <UserSearchBar /> */}
       </Navbar.Collapse>
     </Navbar>
   );

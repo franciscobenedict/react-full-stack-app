@@ -81,50 +81,81 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           </div>
         </div>
 
-        {/*  */}
+        {/* Flights grid */}
         <div className="landing_grid_item2">
-          <div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>
+          <div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
-              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
-                <span className="link_content">1 (click me)</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="landing_grid_item3">
-          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
-          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
-              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
-                <span className="link_content">2 (click me)</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="landing_grid_item4">
-          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
-          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
-              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
-                <span className="link_content">3 (click me)</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="landing_grid_item5">
-          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
-          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
-              <Link to={ (authenticated) ? `/home` : `/mainhome` } className="grid_link">
-                <span className="link_content">4 (click me)</span>
+              <Link to={ (authenticated) ? `/Flights` : `/mainhome` } className="grid_link">
+                <div className="link_content">Flights</div>
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Footer grid */}
-        <div className="landing_grid_item6 footer_landing_container">
+        {/* Accommodation grid  */}
+        <div className="landing_grid_item3">
+          {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to={ (authenticated) ? `/Accommodation` : `/mainhome` } className="grid_link">
+                <div className="link_content">Accommodation</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Events grid  */}
+        <div className="landing_grid_item4">
+          {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to={ (authenticated) ? `/Events` : `/mainhome` } className="grid_link">
+                <div className="link_content">Events</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Activities grid  */}
+        <div className="landing_grid_item5">
+          {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to={ (authenticated) ? `/Activities` : `/mainhome` } className="grid_link">
+                <div className="link_content">Activities</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Restaurants grid  */}
+        <div className="landing_grid_item6">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to={ (authenticated) ? `/Restaurants` : `/mainhome` } className="grid_link">
+                <div className="link_content">Restaurants</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/*  Transport grid */}
+        <div className="landing_grid_item7">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
+          <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
+            <div className="align_content_middle">
+              <Link to={ (authenticated) ? `/Transport` : `/mainhome` } className="grid_link">
+                <div className="link_content">Transport</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer grid  */}
+        <div className="landing_grid_item8 footer_landing_container">
+          {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <div className="social_icons">
@@ -134,10 +165,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
                 <Link className="social_icon" to="/"><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></Link>
               </div>
               <div className="copyright">Copyright &copy; { currentYear } | The Duchess App</div>
-
             </div>
           </div>
         </div>
+
       </div>
 
       <Modal
