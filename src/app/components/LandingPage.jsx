@@ -87,7 +87,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Flights` : `/mainhome` } className="grid_link">
-                <div className="link_content">Flights</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'plane'}/></div>
+                  <div className="grid_text">Flights</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -99,7 +102,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Accommodation` : `/mainhome` } className="grid_link">
-                <div className="link_content">Accommodation</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'hotel'}/></div>
+                  <div className="grid_text">Accommodation</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -111,7 +117,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Events` : `/mainhome` } className="grid_link">
-                <div className="link_content">Events</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'calendar-alt'}/></div>
+                  <div className="grid_text">Events</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -123,7 +132,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Activities` : `/mainhome` } className="grid_link">
-                <div className="link_content">Activities</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'hiking'}/></div>
+                  <div className="grid_text">Activities</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -135,7 +147,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Restaurants` : `/mainhome` } className="grid_link">
-                <div className="link_content">Restaurants</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'utensils'}/></div>
+                  <div className="grid_text">Restaurants</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -147,7 +162,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
             <div className="align_content_middle">
               <Link to={ (authenticated) ? `/Transport` : `/mainhome` } className="grid_link">
-                <div className="link_content">Transport</div>
+                <div className="link_content">
+                  <div className="grid_icon"><FontAwesomeIcon icon={'taxi'}/></div>
+                  <div className="grid_text">Transport</div>
+                </div>
               </Link>
             </div>
           </div>
@@ -187,11 +205,9 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
             <input className="form-control" type="text" placeholder="username" name="username" autoComplete="off" />
             <input className="form-control mt-2" type="password" placeholder="password" defaultValue="" name="password" autoComplete="off" />
             { authenticated === mutations.NOT_AUTHENTICATED ? <p className="error_text">Login incorrect</p> : null }
-
-              <div className="button_container">
-                <button className="btn generic" type="submit">Login</button>
-              </div>
-
+            <div className="button_container">
+              <button className="btn generic" type="submit">Login</button>
+            </div>
           </form>
         </Modal.Body>
       </Modal>

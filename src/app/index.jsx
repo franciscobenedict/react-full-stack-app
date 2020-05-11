@@ -10,8 +10,8 @@ import {
   faTwitter,
   faInstagram
 } from '@fortawesome/free-brands-svg-icons';
-import { faUser, faCheckSquare as fasCheckSquare, faChevronDown as fasChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faCheckSquare as farCheckSquare } from '@fortawesome/free-regular-svg-icons'
+import { faUser, faCheckSquare as fasCheckSquare, faChevronDown as fasChevronDown, faPlane as fasPlane, faHotel as fasHotel, faCalendarAlt as fasCalendarAlt, faHiking as fasHiking, faUtensils as fasUtensils, faTaxi as fasTaxi } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare as farCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import './styles.scss';
 import './fonts/FuturaPTBook.otf';
 import { Main } from './components/Main';
@@ -26,7 +26,8 @@ library.add(
   faTwitter,
   faInstagram,
 
-  fasCheckSquare, farCheckSquare, fasChevronDown
+  fasCheckSquare, farCheckSquare, fasChevronDown,
+  fasPlane, fasHotel, fasCalendarAlt, fasHiking, fasUtensils, fasTaxi
 );
 
 ReactDom.render(

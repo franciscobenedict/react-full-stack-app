@@ -30,7 +30,7 @@
     .grid_link {
       display: table;
       height: 50vh;
-      line-height: 50vh;
+      // line-height: 50vh;
       text-align: center;
       transition: all .2s;
       width: 100%;
@@ -39,8 +39,18 @@
         text-decoration: none;
       }
       .link_content {
+        color: $white;
         display: table-cell;
+        text-transform: uppercase;
         vertical-align: middle;
+
+        height: 80px;
+        position: absolute;
+        top: calc(50% - 40px);
+        width: 100%;
+
+          .grid_icon { font-size: 2em; margin-bottom: 15px; }
+          .grid_text { font-size: 1em; }
       }
     }
 
@@ -69,6 +79,12 @@
       .grid_link {
         height: 100%;
         line-height: 100%;
+          .link_content {
+            // height: 80px;
+            // position: absolute;
+            // top: calc(50% - 40px);
+            // width: 100%;
+          }
       }
 
       .footer_landing_container {
@@ -76,18 +92,6 @@
         color: #FFFFFF;
         font-size: 0.8rem;
       }
-    }
-
-
-    @include respond-above(sm) {
-      .grid_link {
-        .link_content {
-          position: absolute;
-          top: calc(50% - 11px);
-          width: 100%;
-        }
-      }
-
     }
   }
 }
