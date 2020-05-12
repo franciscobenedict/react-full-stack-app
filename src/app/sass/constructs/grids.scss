@@ -44,7 +44,7 @@
 
   // GRID HEIGHT
   .landing_grid_item1 {
-    min-height: 280px;
+    // min-height: 280px;
     ._grid_content_holder { height: 100vh; }
   }
 
@@ -54,7 +54,7 @@
   .landing_grid_item5,
   .landing_grid_item6,
   .landing_grid_item7 {
-    min-height: 149px;
+    // min-height: 149px;
 
     ._grid_content_holder {
       height: 50vh;
@@ -110,7 +110,7 @@
     .landing_grid_item5,
     .landing_grid_item6,
     .landing_grid_item7 {
-      ._grid_content_holder { height: 18.333333333333333vh; }
+      ._grid_content_holder { height: 18.4vh; }
       .more_grid { display: none; }
     }
 
