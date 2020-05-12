@@ -54,10 +54,10 @@
   .landing_grid_item5,
   .landing_grid_item6,
   .landing_grid_item7 {
-    // min-height: 149px;
+    min-height: 149px;
 
     ._grid_content_holder {
-      height: 50%;
+      height: 50vh;
       position: relative;
       z-index: 2;
     }

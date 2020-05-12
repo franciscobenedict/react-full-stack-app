@@ -33,6 +33,10 @@
         display: table;
         // height: 50vh;
         // line-height: 50vh;
+
+        height: 100%;
+        line-height: 100%;
+
         text-align: center;
         transition: all .2s;
         width: 100%;
@@ -48,11 +52,12 @@
 
           height: 80px;
           position: absolute;
+          text-shadow: 1px 1px #666666;
           top: calc(50% - 40px);
           width: 100%;
 
-            .grid_icon { font-size: 2em; margin-bottom: 15px; }
-            .grid_text { font-size: 1em; }
+          .grid_icon { font-size: 2em; margin-bottom: 15px; }
+          .grid_text { font-size: 1em; }
         }
       }
 
@@ -63,6 +68,7 @@
         left: 0;
         position: absolute;
         top: 0;
+        width: 100%;
         z-index: -1;
         // display: none;
       }
@@ -90,15 +96,22 @@
         }
       }
 
-      .grid_link {
-        height: 100%;
-        line-height: 100%;
+      .grid_item {
+        .grid_link {
+          // height: 100%;
+          // line-height: 100%;
           .link_content {
             // height: 80px;
             // position: absolute;
             // top: calc(50% - 40px);
             // width: 100%;
           }
+        }
+
+        .grid_image {
+          height: 100%;
+          width: 100%;
+        }
       }
 
       .footer_landing_container {
