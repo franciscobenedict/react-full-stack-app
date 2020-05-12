@@ -53,7 +53,7 @@
   .landing_grid_item5,
   .landing_grid_item6,
   .landing_grid_item7 {
-    min-height: 149px;
+    // min-height: 149px;
 
     ._grid_content_holder {
       height: 50vh;
@@ -89,6 +89,9 @@
   }
 
   @include respond-above(sm)  {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45% 18.333333333333333% 18.333333333333333% 18.333333333333333%;
+
     grid-template-areas:
       'a h'
       'b c'
@@ -141,6 +144,9 @@
   }
 
   @include respond-above(md) {
+    grid-template-columns: 1.9fr 1.05fr 1.05fr;
+    grid-template-rows: 33.333333333333333% 33.333333333333333% 33.333333333333333%;
+
     grid-template-areas:
       'a b c'
       'a d e'
