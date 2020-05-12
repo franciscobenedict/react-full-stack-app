@@ -30,6 +30,7 @@
     .grid_item {
       position: relative;
       .grid_link {
+        background: rgba(0,0,0,0.4);
         display: table;
         // height: 50vh;
         // line-height: 50vh;
@@ -41,7 +42,7 @@
         transition: all .2s;
         width: 100%;
         &:hover {
-          background: rgba(0,0,0,0.4);
+          background: rgba(0,0,0,0.8);
           text-decoration: none;
         }
         .link_content {
