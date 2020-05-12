@@ -25,12 +25,12 @@ $nav_link_color_active: #FFFFFF;
 
 // BACKGROUNDS
 $grid_item1_background_color: $pale-purple;
-$grid_item2_background_color: #99CCFF;
-$grid_item3_background_color: #9999FF;
-$grid_item4_background_color: #6699FF;
-$grid_item5_background_color: #CCCCFF;
-$grid_item6_background_color: #CC99FF;
-$grid_item7_background_color: #66CCFF;
+$grid_item2_background_color: rgba(153, 204, 255, 0.6); //#99CCFF;
+$grid_item3_background_color: rgba(153, 153, 255, 0.6); //#9999FF;
+$grid_item4_background_color: rgba(102, 153, 255, 0.6); //#6699FF;
+$grid_item5_background_color: rgba(204, 204, 255, 0.6); //#CCCCFF;
+$grid_item6_background_color: rgba(204, 153, 255, 0.6); //#CC99FF;
+$grid_item7_background_color: rgba(102, 204, 255, 0.6); //#66CCFF;
 
 // BUTTONS
 $site_button_color: #976bc7;

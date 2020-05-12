@@ -9,6 +9,13 @@ import { connect } from 'react-redux';
 // import bannerLogo from '../images/banner.png';
 import tidyCannibal from '../images/tidyCannibal_logo.png';
 import fbLogo from '../images/fb-logo-grey.svg';
+import gridClouds from '../images/clouds.jpg';
+import hotelRoom from '../images/hotel-room.jpg';
+import restaurants from '../images/restaurants.jpg';
+import events from '../images/events.jpg';
+import activities from '../images/activities.jpg';
+import transport from '../images/transport.jpg';
+
 import ModalDialog from 'react-bootstrap/ModalDialog';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -85,13 +92,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item2">
           <div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Flights` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'plane'}/></div>
                   <div className="grid_text">Flights</div>
                 </div>
               </Link>
+              <img className="grid_image" src={gridClouds} alt="" />
             </div>
           </div>
         </div>
@@ -100,13 +108,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item3">
           {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Accommodation` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'hotel'}/></div>
                   <div className="grid_text">Accommodation</div>
                 </div>
               </Link>
+              <img className="grid_image" src={hotelRoom} alt="" />
             </div>
           </div>
         </div>
@@ -115,13 +124,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item4">
           {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Events` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'calendar-alt'}/></div>
                   <div className="grid_text">Events</div>
                 </div>
               </Link>
+              <img className="grid_image" src={events} alt="" />
             </div>
           </div>
         </div>
@@ -130,13 +140,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item5">
           {/*<div className="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Activities` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'hiking'}/></div>
                   <div className="grid_text">Activities</div>
                 </div>
               </Link>
+              <img className="grid_image" src={activities} alt="" />
             </div>
           </div>
         </div>
@@ -145,13 +156,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item6">
           {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Restaurants` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'utensils'}/></div>
                   <div className="grid_text">Restaurants</div>
                 </div>
               </Link>
+              <img className="grid_image" src={restaurants} alt="" />
             </div>
           </div>
         </div>
@@ -160,13 +172,14 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item7">
           {/*<div class="more_grid bounce"><FontAwesomeIcon icon={'chevron-down'}/></div>*/}
           <div className="align_middle_container align_text_horizontal_center _grid_content_holder">
-            <div className="align_content_middle">
+            <div className="grid_item align_content_middle">
               <Link to={ (authenticated) ? `/Transport` : `/mainhome` } className="grid_link">
                 <div className="link_content">
                   <div className="grid_icon"><FontAwesomeIcon icon={'taxi'}/></div>
                   <div className="grid_text">Transport</div>
                 </div>
               </Link>
+              <img className="grid_image" src={transport} alt="" />
             </div>
           </div>
         </div>

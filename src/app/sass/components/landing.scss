@@ -27,30 +27,44 @@
       }
     }
 
-    .grid_link {
-      display: table;
-      height: 50vh;
-      // line-height: 50vh;
-      text-align: center;
-      transition: all .2s;
-      width: 100%;
-      &:hover {
-        background: rgba(0,0,0,0.4);
-        text-decoration: none;
-      }
-      .link_content {
-        color: $white;
-        display: table-cell;
-        text-transform: uppercase;
-        vertical-align: middle;
-
-        height: 80px;
-        position: absolute;
-        top: calc(50% - 40px);
+    .grid_item {
+      position: relative;
+      .grid_link {
+        display: table;
+        // height: 50vh;
+        // line-height: 50vh;
+        text-align: center;
+        transition: all .2s;
         width: 100%;
+        &:hover {
+          background: rgba(0,0,0,0.4);
+          text-decoration: none;
+        }
+        .link_content {
+          color: $white;
+          display: table-cell;
+          text-transform: uppercase;
+          vertical-align: middle;
 
-          .grid_icon { font-size: 2em; margin-bottom: 15px; }
-          .grid_text { font-size: 1em; }
+          height: 80px;
+          position: absolute;
+          top: calc(50% - 40px);
+          width: 100%;
+
+            .grid_icon { font-size: 2em; margin-bottom: 15px; }
+            .grid_text { font-size: 1em; }
+        }
+      }
+
+      // Images acquired from: "https://pixabay.com/photos/search/hotels/"
+      // I do not own nor have the rights to these images. They are FREE DOWNLOADS!
+      .grid_image {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        // display: none;
       }
     }
 
