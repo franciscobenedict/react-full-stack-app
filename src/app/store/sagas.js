@@ -26,11 +26,7 @@ export function* taskCreationSaga(){
 }
 
 export function* taskRemovalSaga(){
-  // console.log('====//====> SAGA TO REMOVE A TASK');
   while (true) {
-    // const task = yield take([
-    //   mutations.REMOVE_TASK
-    // ]);
     const task = yield take(mutations.REMOVE_TASK);
     console.log("====//====> { taskID } ", task );
     try {
