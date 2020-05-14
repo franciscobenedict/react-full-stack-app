@@ -55,10 +55,13 @@ export const updateTask = async task=> {
 }
 
 export const removeTask = async task=> {
-  let { id, group, isComplete, name } = task;
+  // let id = task;
   let db = await connectDB();
   let collection = db.collection(`tasks`);
-  await collection.deleteOne(task);
+
+  // if (id) {
+    await collection.deleteOne(task);
+  // }
 }
 
 app.post('/task/new', async (req,res)=> {
@@ -73,7 +76,7 @@ app.post('/task/update', async (req,res)=> {
   res.status(200).send();
 });
 
-app.post('/task/remove', async (req,res)=> {
+app.delete('/task/remove', async (req,res)=> {
   let task = req.body.task;
   await removeTask(task);
   res.status(200).send();

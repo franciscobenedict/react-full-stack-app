@@ -58,7 +58,7 @@ export const setState = (state = {})=>({
   state
 });
 
-export const removeTask = (taskID)=>({
+export const removeTask = (id)=>({
   type:REMOVE_TASK,
-  taskID,
+  taskID: id
 });

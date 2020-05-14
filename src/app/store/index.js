@@ -54,6 +54,12 @@ export const store = createStore(
               {...task,group:action.groupID} :
               task;
           });
+        case mutations.REMOVE_TASK:
+          return tasks.map(task=>{
+            return (task.id === action.taskID) ?
+              {...task} :
+              task;
+          });
       }
       return tasks;
     },

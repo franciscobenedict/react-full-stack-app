@@ -26,21 +26,25 @@ export function* taskCreationSaga(){
 }
 
 export function* taskRemovalSaga(){
+  // console.log('====//====> SAGA TO REMOVE A TASK');
   while (true) {
-    // console.log('SAGA TO REMOVE A TASK');
-    const {groupID} = yield take(mutations.REMOVE_TASK);
-    const ownerID = `U1`;
-    const taskID = uuidv4();
-
-    console.log('ownerID',  ownerID);
-    console.log('taskID',  taskID);
-    yield put(mutations.removeTask(taskID));
-
-    const { res } = yield axios.post(url + `/task/remove`, {
-      task: {
-        id: taskID
-      }
-    });
+    // const task = yield take([
+    //   mutations.REMOVE_TASK
+    // ]);
+    const task = yield take(mutations.REMOVE_TASK);
+    console.log("====//====> { taskID } ", task );
+    try {
+      const response = axios.delete(url + `/task/remove`, {
+        task: {
+          id: task.taskID
+        }
+      });
+      console.log("====//====> Remove task:", response);
+      history.push('/dashboard');
+    } catch (e) {
+      console.log("====//====> Unable to remove task:", e);
+      history.push('/home');
+    }
   }
 }
 

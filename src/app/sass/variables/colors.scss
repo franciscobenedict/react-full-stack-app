@@ -1,6 +1,16 @@
 // BLACK
 $black: #000000;
 $off_black: #444444;
+$black_opacity_10: rgba(0, 0, 0, 1);
+$black_opacity_09: rgba(0, 0, 0, 0.9);
+$black_opacity_08: rgba(0, 0, 0, 0.8);
+$black_opacity_07: rgba(0, 0, 0, 0.7);
+$black_opacity_06: rgba(0, 0, 0, 0.6);
+$black_opacity_05: rgba(0, 0, 0, 0.5);
+$black_opacity_04: rgba(0, 0, 0, 0.4);
+$black_opacity_03: rgba(0, 0, 0, 0.3);
+$black_opacity_02: rgba(0, 0, 0, 0.2);
+$black_opacity_01: rgba(0, 0, 0, 0.1);
 
 // WHITE
 $white: #FFFFFF;
@@ -23,9 +33,9 @@ $pale-purple: #E7DDF2;
 // LINKS
 $link_color: #3A1664;
 $link_color_hover: #79589f;
-$nav_link_color: #222222;
-$nav_link_color_hover: #666666;
-$nav_link_color_active: #FFFFFF;
+$nav_link_color: #999999;
+$nav_link_color_hover: #FFFFFF;
+$nav_link_color_active: $pale-purple;
 
 // BACKGROUNDS
 $grid_item1_background_color: $pale-purple;
