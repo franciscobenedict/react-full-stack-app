@@ -5,7 +5,7 @@ import React from 'react';
 import { store } from '../store';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import logo from '../images/dfms-logo-color.png';
+import logo from '../images/TheDuchessLogo_horizontal.png';
 
 // USER BUTTONS
 function UserButton(props) {

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 // import bird from '../images/bird.png';
 // import bannerLogo from '../images/banner.png';
 import tidyCannibal from '../images/tidyCannibal_logo.png';
-import fbLogo from '../images/fb-logo-grey.svg';
+import theDuchessLogo from '../images/TheDuchessLogo.png';
 import gridClouds from '../images/clouds.jpg';
 import hotelRoom from '../images/hotel-room.jpg';
 import restaurants from '../images/restaurants.jpg';
@@ -64,10 +64,10 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         <div className="landing_grid_item1 main_landing_container">
           <div className="main_holder _grid_content_holder">
             <div className="duchess_logo_container">
-              <img className="" src={fbLogo} alt="The Duchess Logo" />
+              <img className="" src={theDuchessLogo} alt="The Duchess Logo" />
             </div>
 
-            <h1>The Duchess</h1>
+            {/*<h1>The Duchess</h1>*/}
 
             {
               (authenticated) &&

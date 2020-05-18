@@ -8,13 +8,11 @@ export const Home = ()=>(
   <div className="main">
     <ConnectedNavigation/>
       <div className="container-fluid">
-        <h1>Welcome</h1>
-        <p className="">Welcome to the Duchess App</p>
-        <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>sub heading</h2>
-        <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>sub heading</h2>
-        <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>Welcome</h1>      
+        <p className="">I would like to introduce to you The Dutchess.</p>
+        <p className="">The origin of The Dutchess is to provide an avenue to live lavishly and affordably through travelling to the Caribbean.</p>
+        <p className="">In this pandemic we must learn to adapt in this changing world in finding ways to sustain our normal way of life. The Dutchess has been conceptualized to do just that, providing all inclusive event holiday packages that will be unforgettable and affordable. This initiation will not only generate revenue it will also diversify travel experience. Surrounded by an amazing network, creative expansion ideas and the love for my home Barbados.</p>
+        <p className="">With your assistance from the recognition of immediate contingencies together we will be in the mist of countries providing a normality.</p>
       </div>
     <ConnectedFooter/>
   </div>
