@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 // import bird from '../images/bird.png';
 // import bannerLogo from '../images/banner.png';
 import tidyCannibal from '../images/tidyCannibal_logo.png';
-import theDuchessLogo from '../images/TheDuchessLogo.png';
+import theDuchessLogo from '../images/the_duchess.png'; //TheDuchessLogo.png';
 import gridClouds from '../images/clouds.jpg';
 import hotelRoom from '../images/hotel-room.jpg';
 import restaurants from '../images/restaurants.jpg';
@@ -63,28 +63,30 @@ export const LandingPage = ({authenticateUser, authenticated})=> {
         {/* Main grid*/}
         <div className="landing_grid_item1 main_landing_container">
           <div className="main_holder _grid_content_holder">
-            <div className="duchess_logo_container">
-              <img className="" src={theDuchessLogo} alt="The Duchess Logo" />
-            </div>
-
-            {/*<h1>The Duchess</h1>*/}
-
-            {
-              (authenticated) &&
-              <div className="user_welcome">
-                <div>Hello, <span className="text_italic">{localStorage.getItem('username')}</span></div>
-                {/*<div>Feel free to browse The Duchess app.</div>*/}
-                <div className="button_container">
-                  <Link className="btn generic" to="/home">Browse</Link>
-                </div>
+            <div className="grid_item">
+              <div className="duchess_logo_container">
+                <img className="" src={theDuchessLogo} alt="The Duchess Logo" />
               </div>
-            }
 
-            { (!authenticated) &&
+              {/*<h1>The Duchess</h1>*/}
+
+              {
+                (authenticated) &&
+                <div className="user_welcome">
+                  <div>Hello, <span className="text_italic">{localStorage.getItem('username')}</span></div>
+                  {/*<div>Feel free to browse The Duchess app.</div>*/}
+                  <div className="button_container">
+                    <Link className="btn generic" to="/home">Browse</Link>
+                  </div>
+                </div>
+              }
+
+              { (!authenticated) &&
               <div className="button_container">
                 <button className="btn generic" variant="" onClick={() => setShow(true)}>Login</button>
               </div>
             }
+            </div>
           </div>
         </div>
 
